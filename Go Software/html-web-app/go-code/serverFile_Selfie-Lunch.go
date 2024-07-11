@@ -172,112 +172,112 @@ pageData := htmlPageData {
     
    // ,  ° . +  - _ ` Menu ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Menu" {
+      pageTitle = "Menu Page"
       pageList = pageList
   }
   
   
     // ,  ° . + - _ ` Location ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Location" {
+      pageTitle = "Location Page"
       pageList = pageList
   }
   
   
    // ,  ° . + - _ ` Equiptment ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Equiptment" {
+      pageTitle = "Equiptment Page"
       pageList = pageList
   }
   
   
     // ,  ° . +- _ ` Staff ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Staff" {
+      pageTitle = "Staff Page"
       pageList = pageList
   }
   
   
     // ,  ° . + - _ ` Services ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Services" {
+      pageTitle = "Services Page"
       pageList = pageList
   }
   
   
     // ,  ° . + - _ ` Music ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Music" {
+      pageTitle = "Music Page"
       pageList = pageList
   }
   
   
     // ,  ° . + - _ ` Setting ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Setting" {
+      pageTitle = "Setting Page"
       pageList = pageList
   }
   
   
     // ,  ° . + - _ ` Sources ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Sources" {
+      pageTitle = "Sources Page"
       pageList = pageList
   }
   
   
    // ,  ° . +  - _ ` Marketing ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Marketing" {
+      pageTitle = "Marketing Page"
       pageList = pageList
   }
   
   
   // ,  ° . +  - _ ` Operations ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Operations" {
+      pageTitle = "Operations Page"
       pageList = pageList
   }
   
   
     // ,  ° . + - _ ` Software ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Software" {
+      pageTitle = "Software Page"
       pageList = pageList
   }
   
   
     // ,  ° . + - _ ` Events ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Events" {
+      pageTitle = "Events Page"
       pageList = pageList
   }
   
   
    // ,  ° . +  - _ ` Seating ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Seating" {
+      pageTitle = "Seating Page"
       pageList = pageList
   }
   
   
    // ,  ° . +  - _ ` Hours ~
   // ,  ° . +
-  if pagePath == "/portfolio" {
-      pageTitle = "Portfolio Page"
+  if pagePath == "/Hours" {
+      pageTitle = "Hours Page"
       pageList = pageList
   }
 
