@@ -134,6 +134,49 @@ func main() {
   http.HandleFunc("/settings", indexHandler)
   
 
+// ,  ° . +
+` <p>Cafe Needs<ul>
+http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Menu ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Location ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Equiptment ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Staff ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Services ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Music ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Setting ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Sources ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Marketing ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Operations ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Software ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Events ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Seating ~
+  
+  http.HandleFunc("/portfolio", indexHandler)
+  - _ ` Hours ~
 
 
 
@@ -144,7 +187,7 @@ func main() {
     log.Printf("Loading _webapp with default port")
   }
   
-  
+  // ,  ° . +
   log.Printf("_webapp is active and Listening on port %s", port)
 
   log.Printf("// -- - %s", appName)
