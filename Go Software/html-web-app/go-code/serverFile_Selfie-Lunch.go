@@ -133,50 +133,48 @@ func main() {
   
   http.HandleFunc("/settings", indexHandler)
   
-
-// ,  ° . +
-` <p>Cafe Needs<ul>
-http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Menu ~
+  // ,  ° . +` <p>Cafe Needs<ul>
+http.HandleFunc("/Menu", indexHandler)
+  // ,  ° . + - _ ` Menu ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Location ~
+  http.HandleFunc("/Location", indexHandler)
+  // ,  ° . + - _ ` Location ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Equiptment ~
+  http.HandleFunc("/Equiptment", indexHandler)
+  // ,  ° . + - _ ` Equiptment ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Staff ~
+  http.HandleFunc("/Staff", indexHandler)
+ // ,  ° . + - _ ` Staff ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Services ~
+  http.HandleFunc("/Services", indexHandler)
+ // ,  ° . + - _ ` Services ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Music ~
+  http.HandleFunc("/Music", indexHandler)
+  // ,  ° . +- _ ` Music ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Setting ~
+  http.HandleFunc("/Setting", indexHandler)
+ // ,  ° . + - _ ` Setting ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Sources ~
+  http.HandleFunc("/Sources", indexHandler)
+ // ,  ° . + - _ ` Sources ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Marketing ~
+  http.HandleFunc("/Marketing", indexHandler)
+  // ,  ° . +- _ ` Marketing ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Operations ~
+  http.HandleFunc("/Operations", indexHandler)
+  // ,  ° . +- _ ` Operations ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Software ~
+  http.HandleFunc("/Software", indexHandler)
+// ,  ° . +  - _ ` Software ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Events ~
+  http.HandleFunc("/Events", indexHandler)
+ // ,  ° . + - _ ` Events ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Seating ~
+  http.HandleFunc("/Seating", indexHandler)
+  // ,  ° . +- _ ` Seating ~
   
-  http.HandleFunc("/portfolio", indexHandler)
-  - _ ` Hours ~
+  http.HandleFunc("/Hours", indexHandler)
+ // ,  ° . + - _ ` Hours ~
 
 
 
