@@ -100,11 +100,7 @@ func appHandler(w http.ResponseWriter, r *http.Request) {
       pageTitle = "Settings Page"
       pageList = pageList
   }
-  
-
  
-  
-  
   
   pageFilePath := template.Must(template.ParseFiles("layout_main_page.html"))
   pageFilePath.Execute(w, pageData)
@@ -112,6 +108,185 @@ func appHandler(w http.ResponseWriter, r *http.Request) {
 }  //  .  appHandler
 
 
+
+// . pageHandler, ~ for User Pages °
+func pageHandler(w http.ResponseWriter, r *http.Request) {
+// ,  ° . +
+
+  pageTitle := "~ Selfie_Lunch - // - Website App"
+  pagePath := r.URL.Path
+  pageType := ".."
+
+
+// ,  ° . +
+pageData := htmlPageData {
+      pageTitle: pageTitle,
+      pagePath: pagePath,
+      
+      pageList: []pageNav {
+          { pageTitle: "one", pageLink: "one"},
+          { pageTitle: "two", pageLink: "two"},
+          { pageTitle: "three", pageLink: "three"},
+      },
+  	
+  }  //. .  pageData
+  
+  
+  // ,  ° . +
+  if pagePath == "/user" {
+      pageTitle = "User Page"
+      pageList = pageList
+  }
+  
+  // ,  ° . +
+  if pagePath == "/user" {
+      pageTitle = "User Page"
+      pageList = pageList
+  }
+  
+  if pagePath == "/account" {
+      pageTitle = "Account Page"
+      pageList = pageList
+  }
+  
+  if pagePath == "/profile" {
+      pageTitle = "Profile Page"
+      pageList = pageList
+  }
+  
+  
+// ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  if pagePath == "/resume" {
+      pageTitle = "Resume Page"
+      pageList = pageList
+  }
+  
+  
+    // ,  ° . + ` <p>Cafe Needs<ul>
+    
+    
+   // ,  ° . +  - _ ` Menu ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+    // ,  ° . + - _ ` Location ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+   // ,  ° . + - _ ` Equiptment ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+    // ,  ° . +- _ ` Staff ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+    // ,  ° . + - _ ` Services ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+    // ,  ° . + - _ ` Music ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+    // ,  ° . + - _ ` Setting ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+    // ,  ° . + - _ ` Sources ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+   // ,  ° . +  - _ ` Marketing ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+  // ,  ° . +  - _ ` Operations ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+    // ,  ° . + - _ ` Software ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+    // ,  ° . + - _ ` Events ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+   // ,  ° . +  - _ ` Seating ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+  
+  
+   // ,  ° . +  - _ ` Hours ~
+  // ,  ° . +
+  if pagePath == "/portfolio" {
+      pageTitle = "Portfolio Page"
+      pageList = pageList
+  }
+
+
+// ,  ° . +
+pageFilePath := template.Must(template.ParseFiles("layout_main_page.html"))
+  pageFilePath.Execute(w, pageData)
+  
+}  //  .  pageHandler
 
 
 //  .  html url routes 
