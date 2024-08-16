@@ -49,6 +49,7 @@ https://github.com/Kyle2501/selfie_lunch
 <div class="wrap">Notes
 <div class="number">5</div>
 </div>
+<div id="main_view"></div>
 </main>
 
 <footer>
@@ -60,7 +61,15 @@ https://github.com/Kyle2501/selfie_lunch
 </footer>
 
 <script>
-	
+
+var mainView = document.GetElementById("main_view");
+
+function open1() { main_view.innerHTML = "1"; }
+function open2() { main_view.innerHTML = "2"; }
+function open3() { main_view.innerHTML = "3"; }
+function open4() { main_view.innerHTML = "4"; }
+function open5() { main_view.innerHTML = "5"; }
+function close() { main_view.innerHTML = ""; }
 	
 </script>
 
