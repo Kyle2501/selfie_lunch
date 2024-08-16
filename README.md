@@ -23,3 +23,18 @@ _ ` ... ` ~
   - _ ` Hours ~
   
   '
+  
+  --- 
+  _ `...` ~
+  
+  ### Kitchen Needs ° . +
+  + Timer
+  + Amount Conversion 
+  + Recipe Stuff
+  + Camera
+  + Notes
+  
+  
+  
+  
+  
