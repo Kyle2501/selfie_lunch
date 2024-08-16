@@ -3,7 +3,9 @@
 <head>
 <style>
 
-main div { outline: 1px solid #777;  padding: 15px;  margin: 10px;  }
+main div.wrap { outline: 1px solid #777;  padding: 15px;  margin: 10px;  position: relative; }
+main div.number { position: absolute; top: 5px; right: 5px; }
+
 
 footer { position: fixed; bottom: 8px; left: 5px; }
 
@@ -14,7 +16,7 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
 </head>
 <body>
 <div>
-# selfie_lunch
+# selfie_lunch<br />
 https://github.com/Kyle2501/selfie_lunch
 <hr />
 </div>
@@ -32,20 +34,35 @@ https://github.com/Kyle2501/selfie_lunch
 <hr />
 
 <main>
-<div>Timer</div>
-<div>Amount Conversion</div>
-<div>Recipe Stuff</div>
-<div>Camera</div>
-<div>Notes</div>
+<div class="wrap">Timer
+<div class="number">1</div>
+</div>
+<div class="wrap">Amount Conversion
+<div class="number">2</div>
+</div>
+<div class="wrap">Recipe Stuff
+<div class="number">3</div>
+</div>
+<div class="wrap">Camera
+<div class="number">4</div>
+</div>
+<div class="wrap">Notes
+<div class="number">5</div>
+</div>
 </main>
 
 <footer>
-<div>1</div>
-<div>2</div>
-<div>3</div>
-<div>4</div>
-<div>5</div>
+<div class="button" onClick="open1()">1</div>
+<div class="button" onClick="open2()">2</div>
+<div class="button" onClick="open3()">3</div>
+<div class="button" onClick="open4()">4</div>
+<div class="button" onClick="open5()">5</div>
 </footer>
+
+<script>
+	
+	
+</script>
 
 </body>
 </html>
