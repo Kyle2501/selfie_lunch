@@ -34,19 +34,19 @@ https://github.com/Kyle2501/selfie_lunch
 <hr />
 
 <main>
-<div class="wrap">Timer
+<div class="wrap" id="wrap1">Timer
 <div class="number">1</div>
 </div>
-<div class="wrap">Amount Conversion
+<div class="wrap" id="wrap2">Amount Conversion
 <div class="number">2</div>
 </div>
-<div class="wrap">Recipe Stuff
+<div class="wrap" id="wrap3">Recipe Stuff
 <div class="number">3</div>
 </div>
-<div class="wrap">Camera
+<div class="wrap" id="wrap4">Camera
 <div class="number">4</div>
 </div>
-<div class="wrap">Notes
+<div class="wrap" id="wrap5">Notes
 <div class="number">5</div>
 </div>
 <div id="main_view"></div>
@@ -64,12 +64,29 @@ https://github.com/Kyle2501/selfie_lunch
 
 // var mainView = document.GetElementById("main_view");
 
-function open1() { main_view.innerHTML = "1"; }
-function open2() { main_view.innerHTML = "2"; }
-function open3() { main_view.innerHTML = "3"; }
-function open4() { main_view.innerHTML = "4"; }
-function open5() { main_view.innerHTML = "5"; }
-function close() { main_view.innerHTML = ""; }
+function open1() { 
+  main_view.innerHTML = "1";  
+  wrap1.style.outline = "4px dashed #333"; 
+}
+function open2() { 
+  main_view.innerHTML = "2"; 
+  wrap2.style.outline = "4px dashed #333"; 
+}
+function open3() { 
+  main_view.innerHTML = "3"; 
+  wrap3.style.outline = "4px dashed #333"; 
+}
+function open4() { 
+  main_view.innerHTML = "4"; 
+  wrap4.style.outline = "4px dashed #333"; 
+}
+function open5() { 
+  main_view.innerHTML = "5"; 
+  wrap5.style.outline = "4px dashed #333"; 
+}
+function close() { 
+  main_view.innerHTML = ""; 
+}
 	
 </script>
 
