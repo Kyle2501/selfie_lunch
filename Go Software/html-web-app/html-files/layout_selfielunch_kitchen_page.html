@@ -6,11 +6,16 @@
 .sitename { font-size: 24px; }
 div.subtitle { font-size: 14px; margin-top: 5px; }
 
-nav { margin: 15px; }
+nav { margin: 15px; margin-top: 5px; }
 
 main div.wrap { outline: 1px solid #777;  padding: 15px;  margin: 10px;  position: relative; }
 main div.number { position: absolute; top: 5px; right: 5px; }
 
+.timer_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
+.amount_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
+.recipe_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
+.camera_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
+.notes_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
 
 footer { position: fixed; bottom: 8px; left: 5px; }
 
@@ -39,26 +44,47 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
 <hr />
 
 <main>
-<div class="wrap" id="wrap1">Timer
-<div class="number">1</div>
-<div class="close" onClick="close1()">×</div>
-</div>
+  <div class="wrap" id="wrap1">Timer
+    <div class="number">1</div>
+    <div class="close" onClick="close1()">×</div>
+    <div class="timer_data_wrap">
+    	
+   </div><!-- - . timer_data_wrap - -->
+  </div><!-- - . wrap - -->
+
 <div class="wrap" id="wrap2">Amount Conversion
 <div class="number">2</div>
 <div class="close" onClick="close2()">×</div>
-</div>
+<div class="amount_data_wrap">
+    	
+   </div><!-- - . amount_data_wrap - -->
+</div><!-- - . wrap - -->
+	
 <div class="wrap" id="wrap3">Recipe Stuff
 <div class="number">3</div>
 <div class="close" onClick="close3()">×</div>
-</div>
+<div class="recipe_data_wrap">
+    	
+   </div><!-- - . recipe_data_wrap - -->
+</div><!-- - . wrap - -->
+	
 <div class="wrap" id="wrap4">Camera
 <div class="number">4</div>
 <div class="close" onClick="close4()">×</div>
-</div>
+<div class="camera_data_wrap">
+    	
+   </div><!-- - . camera_data_wrap - -->
+</div><!-- - . wrap - -->
+	
 <div class="wrap" id="wrap5">Notes
 <div class="number">5</div>
 <div class="close" onClick="close5()">×</div>
-</div>
+<div class="notes_data_wrap">
+    	
+   </div><!-- - . notes_data_wrap - -->
+</div><!-- - . wrap - -->
+	
+	
 <div id="main_view"></div>
 </main>
 
