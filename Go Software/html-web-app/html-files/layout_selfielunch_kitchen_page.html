@@ -6,6 +6,10 @@
 .sitename { font-size: 24px; }
 div.subtitle { font-size: 14px; margin-top: 5px; }
 
+.top_bar_wrap { margin-bottom: 15px; }
+.right_buttons { position: absolute; right: 10px; }
+
+
 nav { margin: 15px; margin-top: 5px; }
 
 main div.wrap { outline: 1px solid #777;  padding: 15px;  margin: 10px;  position: relative; }
@@ -18,12 +22,16 @@ main div.number { position: absolute; top: 5px; right: 5px; }
 .notes_wrap { display: none; }
 .log_wrap { display: none; }
 
-.timer_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
-.amount_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
+.timer_data_wrap { outline: 2px dashed #aaa; width: 185px; height: 185px; margin: 0 auto; }
+.amount_data_wrap { outline: 2px dashed #aaa; width: 225px; height: 85px; padding: 5px; }
 .recipe_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
 .camera_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
 .notes_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
-.log_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
+.log_data_wrap { outline: 2px dashed #aaa; width: 95%; height: 85px; margin: 0 auto; }
+
+.clock_outline_wrap { border: 1px solid #888; border-radius: 50%; height: 100%; }
+
+.form_button { text-align: right; }
 
 footer { position: fixed; bottom: 8px; left: 5px; }
 
@@ -33,14 +41,15 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
 </style>
 </head>
 <body>
-<div>
+<div class="top_bar_wrap">
 <div class="sitename"># app ~ `selfie_lunch` Software</div>
 <div class="subtitle">https://github.com/Kyle2501/selfie_lunch</div>
 <hr />
+<button onclick="window.location.href='https://github.com/Kyle2501/selfie_lunch'">Repo</button>
+<div class="right_buttons"><button>Nav</button></div>
 </div>
 
 <div><b>Kitchen Page</b></div>
-
 <nav>
 <div id="nav1">~ Timer</div>
 <div id="nav2">~ Amount Conversion</div>
@@ -57,7 +66,7 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
     <div class="number">1</div>
     <div class="close" onClick="close1()">×</div>
     <div class="timer_data_wrap">
-    	
+    	<div class="clock_outline_wrap"></div>
    </div><!-- - . timer_data_wrap - -->
   </div><!-- - . wrap - -->
 
@@ -65,7 +74,10 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
 <div class="number">2</div>
 <div class="close" onClick="close2()">×</div>
 <div class="amount_data_wrap">
-    	
+    	<form>
+    	<input type="text" />
+    <div class="form_button"><input type="submit" value="Search"></div>
+    </form>
    </div><!-- - . amount_data_wrap - -->
 </div><!-- - . wrap - -->
 	
@@ -96,9 +108,9 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
 	<div class="notes_wrap wrap" id="wrap6">Session Log
 <div class="number">6</div>
 <div class="close" onClick="close6()">×</div>
-<div class="notes_data_wrap">
+<div class="log_data_wrap">
     	
-   </div><!-- - . notes_data_wrap - -->
+   </div><!-- - . log_data_wrap - -->
 </div><!-- - . wrap - -->
 	
 	
@@ -185,7 +197,7 @@ function close5() {
 }
 
 function open6() { 
-  main_view.innerHTML = "5"; 
+  main_view.innerHTML = "6"; 
   wrap6.style.display = "block";
   wrap6.style.outline = "4px dashed #333"; 
   nav6.style.color = "green";
