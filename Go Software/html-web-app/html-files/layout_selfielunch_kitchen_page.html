@@ -16,12 +16,14 @@ main div.number { position: absolute; top: 5px; right: 5px; }
 .recipe_wrap { display: none; }
 .camera_wrap { display: none; }
 .notes_wrap { display: none; }
+.log_wrap { display: none; }
 
 .timer_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
 .amount_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
 .recipe_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
 .camera_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
 .notes_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
+.log_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
 
 footer { position: fixed; bottom: 8px; left: 5px; }
 
@@ -45,6 +47,7 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
 <div id="nav3">~ Recipe Stuff</div>
 <div id="nav4">~ Camera</div>
 <div id="nav5">~ Notes</div>
+<div id="nav6">~ Session Log</div>
 </nav>
 
 <hr />
@@ -90,6 +93,14 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
    </div><!-- - . notes_data_wrap - -->
 </div><!-- - . wrap - -->
 	
+	<div class="notes_wrap wrap" id="wrap6">Session Log
+<div class="number">6</div>
+<div class="close" onClick="close6()">×</div>
+<div class="notes_data_wrap">
+    	
+   </div><!-- - . notes_data_wrap - -->
+</div><!-- - . wrap - -->
+	
 	
 <div id="main_view"></div>
 </main>
@@ -100,6 +111,7 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
 <div class="button" onClick="open3()">3</div>
 <div class="button" onClick="open4()">4</div>
 <div class="button" onClick="open5()">5</div>
+<div class="button" onClick="open6()">6</div>
 </footer>
 
 <script>
@@ -170,6 +182,19 @@ function close5() {
   wrap5.style.display = "none";
   wrap5.style.outline = "1px solid #777"; 
   nav5.style.color = "black";
+}
+
+function open6() { 
+  main_view.innerHTML = "5"; 
+  wrap6.style.display = "block";
+  wrap6.style.outline = "4px dashed #333"; 
+  nav6.style.color = "green";
+}
+function close6() { 
+  main_view.innerHTML = "";  
+  wrap6.style.display = "none";
+  wrap6.style.outline = "1px solid #777"; 
+  nav6.style.color = "black";
 }
 
 function close() { 
