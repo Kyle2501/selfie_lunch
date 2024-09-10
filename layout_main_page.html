@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+<style>
+	
+.sitename { font-size: 24px; }
+div.subtitle { font-size: 14px; margin-top: 5px; }
+
+.top_bar_wrap { margin-bottom: 15px; }
+.right_buttons { position: absolute; right: 10px; }
+
+
+nav { margin: 15px; margin-top: 5px; }
+
+main div.wrap { outline: 1px solid #777;  padding: 15px;  margin: 10px;  position: relative; }
+main div.number { position: absolute; top: 5px; right: 5px; }
+
+.timer_wrap { display: none; }
+.amount_wrap { display: none; }
+.recipe_wrap { display: none; }
+.camera_wrap { display: none; }
+.notes_wrap { display: none; }
+.log_wrap { display: none; }
+
+.timer_data_wrap { outline: 2px dashed #aaa; width: 185px; height: 185px; margin: 0 auto; }
+.amount_data_wrap { outline: 2px dashed #aaa; width: 225px; height: 85px; padding: 5px; }
+.recipe_data_wrap { outline: 2px dashed #aaa; width: 45%; height: 85px; }
+.camera_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
+.notes_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
+.log_data_wrap { outline: 2px dashed #aaa; width: 95%; height: 85px; margin: 0 auto; }
+
+.clock_outline_wrap { border: 1px solid #888; border-radius: 50%; height: 100%; }
+
+.form_button { text-align: right; }
+
+footer { position: fixed; bottom: 8px; left: 5px; }
+
+footer div { border: 1px solid #777; padding: 5px; display: inline-block; border-radius: 3px; }
+	
+	
+</style>
+</head>
+<body>
+<div class="top_bar_wrap">
+<div class="sitename"># app ~ `selfie_lunch` Software</div>
+<div class="subtitle">https://github.com/Kyle2501/selfie_lunch</div>
+<hr />
+<button onclick="window.location.href='https://github.com/Kyle2501/selfie_lunch'">Repo</button>
+<div class="right_buttons"><button>Nav</button></div>
+</div>
+
+<div><b>Kitchen Page</b></div>
+<nav>
+<div id="nav1">~ Timer</div>
+<div id="nav2">~ Amount Conversion</div>
+<div id="nav3">~ Recipe Stuff</div>
+<div id="nav4">~ Camera</div>
+<div id="nav5">~ Notes</div>
+<div id="nav6">~ Session Log</div>
+</nav>
+
+<hr />
+
+<main>
+  <div class="timer_wrap wrap" id="wrap1">Timer
+    <div class="number">1</div>
+    <div class="close" onClick="close1()">×</div>
+    <div class="timer_data_wrap">
+    	<div class="clock_outline_wrap"></div>
+   </div><!-- - . timer_data_wrap - -->
+  </div><!-- - . wrap - -->
+
+<div class="amount_wrap wrap" id="wrap2">Amount Conversion
+<div class="number">2</div>
+<div class="close" onClick="close2()">×</div>
+<div class="amount_data_wrap">
+    	<form>
+    	<input type="text" />
+    <div class="form_button"><input type="submit" value="Search"></div>
+    </form>
+   </div><!-- - . amount_data_wrap - -->
+</div><!-- - . wrap - -->
+	
+<div class="recipe_wrap wrap" id="wrap3">Recipe Stuff
+<div class="number">3</div>
+<div class="close" onClick="close3()">×</div>
+<div class="recipe_data_wrap">
+    	
+   </div><!-- - . recipe_data_wrap - -->
+</div><!-- - . wrap - -->
+	
+<div class="camera_wrap wrap" id="wrap4">Camera
+<div class="number">4</div>
+<div class="close" onClick="close4()">×</div>
+<div class="camera_data_wrap">
+    	
+   </div><!-- - . camera_data_wrap - -->
+</div><!-- - . wrap - -->
+	
+<div class="notes_wrap wrap" id="wrap5">Notes
+<div class="number">5</div>
+<div class="close" onClick="close5()">×</div>
+<div class="notes_data_wrap">
+    	
+   </div><!-- - . notes_data_wrap - -->
+</div><!-- - . wrap - -->
+	
+	<div class="notes_wrap wrap" id="wrap6">Session Log
+<div class="number">6</div>
+<div class="close" onClick="close6()">×</div>
+<div class="log_data_wrap">
+    	
+   </div><!-- - . log_data_wrap - -->
+</div><!-- - . wrap - -->
+	
+	
+<div id="main_view"></div>
+</main>
+
+<footer>
+<div class="button" onClick="open1()">1</div>
+<div class="button" onClick="open2()">2</div>
+<div class="button" onClick="open3()">3</div>
+<div class="button" onClick="open4()">4</div>
+<div class="button" onClick="open5()">5</div>
+<div class="button" onClick="open6()">6</div>
+</footer>
+
+<script>
+
+// var mainView = document.GetElementById("main_view");
+
+function open1() { 
+  main_view.innerHTML = "1";  
+  wrap1.style.display = "block";
+  wrap1.style.outline = "4px dashed #333"; 
+  nav1.style.color = "green";
+}
+function close1() { 
+  main_view.innerHTML = "";  
+  wrap1.style.display = "none";
+  wrap1.style.outline = "1px solid #777"; 
+  nav1.style.color = "black";
+}
+
+
+function open2() { 
+  main_view.innerHTML = "2"; 
+  wrap2.style.display = "block";
+  wrap2.style.outline = "4px dashed #333"; 
+  nav2.style.color = "green";
+}
+function close2() { 
+  main_view.innerHTML = "";  
+  wrap2.style.display = "none";
+  wrap2.style.outline = "1px solid #777"; 
+  nav2.style.color = "black";
+}
+
+function open3() { 
+  main_view.innerHTML = "3"; 
+  wrap3.style.display = "block";
+  wrap3.style.outline = "4px dashed #333"; 
+  nav3.style.color = "green";
+}
+function close3() { 
+  main_view.innerHTML = "";  
+  wrap3.style.display = "none";
+  wrap3.style.outline = "1px solid #777"; 
+  nav3.style.color = "black";
+}
+
+function open4() { 
+  main_view.innerHTML = "4"; 
+  wrap4.style.display = "block";
+  wrap4.style.outline = "4px dashed #333"; 
+  nav4.style.color = "green";
+}
+function close4() { 
+  main_view.innerHTML = "";  
+  wrap4.style.display = "none";
+  wrap4.style.outline = "1px solid #777"; 
+  nav4.style.color = "black";
+}
+
+function open5() { 
+  main_view.innerHTML = "5"; 
+  wrap5.style.display = "block";
+  wrap5.style.outline = "4px dashed #333"; 
+  nav5.style.color = "green";
+}
+function close5() { 
+  main_view.innerHTML = "";  
+  wrap5.style.display = "none";
+  wrap5.style.outline = "1px solid #777"; 
+  nav5.style.color = "black";
+}
+
+function open6() { 
+  main_view.innerHTML = "6"; 
+  wrap6.style.display = "block";
+  wrap6.style.outline = "4px dashed #333"; 
+  nav6.style.color = "green";
+}
+function close6() { 
+  main_view.innerHTML = "";  
+  wrap6.style.display = "none";
+  wrap6.style.outline = "1px solid #777"; 
+  nav6.style.color = "black";
+}
+
+function close() { 
+  main_view.innerHTML = ""; 
+}
+	
+</script>
+
+</body>
+</html>
+
