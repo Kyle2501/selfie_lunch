@@ -74,6 +74,59 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
 
 <hr />
 
+<script>
+
+function openChartdiv() {
+  chartdiv.style.display = "block";
+};
+
+function openChartdiv1() {
+  chartdiv1.style.display = "block";
+};
+
+function openChartdiv6() {
+  chartdiv6.style.display = "block";
+};
+
+function openChartdiv3() {
+  chartdiv3.style.display = "block";
+};
+
+function openChartdiv4() {
+  chartdiv4.style.display = "block";
+};
+
+function openChartdiv5() {
+  chartdiv5.style.display = "block";
+};
+
+// ---
+function closeChartdiv() {
+  chartdiv.style.display = "none";
+};
+
+function closeChartdiv1() {
+  chartdiv1.style.display = "none";
+};
+
+function closeChartdiv6() {
+  chartdiv6.style.display = "none";
+};
+
+function closeChartdiv3() {
+  chartdiv3.style.display = "none";
+};
+
+function closeChartdiv4() {
+  chartdiv4.style.display = "none";
+};
+
+function closeChartdiv5() {
+  chartdiv5.style.display = "none";
+};
+	
+	</script>
+
 <main>
   <div class="timer_wrap wrap" id="wrap1">
   	<div class="area_head_wrap">
@@ -82,12 +135,12 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
     <div class="close" onClick="close1()">×</div>
   </div><!-- - . area_head_wrap - -->
   	<div class="chart_list_wrap">
-  	<div class="chart_list_item">chartdiv</div>
-  <div class="chart_list_item">chartdiv1</div>
-  <div class="chart_list_item">chartdiv3</div>
-  <div class="chart_list_item">chartdiv4</div>
-  <div class="chart_list_item">chartdiv5</div>
-  <div class="chart_list_item">chartdiv6</div>
+  	<div class="chart_list_item" onClick="openChartdiv()">chartdiv</div>
+  <div class="chart_list_item" onClick="openChartdiv1()">chartdiv1</div>
+  <div class="chart_list_item" onClick="openChartdiv3()">chartdiv3</div>
+  <div class="chart_list_item" onClick="openChartdiv4()">chartdiv4</div>
+  <div class="chart_list_item" onClick="openChartdiv5()">chartdiv5</div>
+  <div class="chart_list_item" onClick="openChartdiv6()">chartdiv6</div>
   </div><!-- - chart_list_wrap - -->
     <div class="timer_data_wrap">
     	<div class="clock_outline_wrap"></div>
@@ -97,40 +150,68 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
 <!-- HTML -->
 	<div class="chart_area_wrap">
 	<div class="chart_name">chartdiv</div>
+	<div class="chart_buttons_wrap">
+		<button onClick="closeChartdiv()">Close</button> &nbsp;
+		<button onClick="openChartdiv()">Open</button>
+		</div><!-- - chart_buttons_wrap - -->
 <div id="chartdiv"></div>
 </div><!-- - chart_area_wrap - -->
 	<div class="chart_area_wrap">
   <div class="chart_name">chartdiv1</div>
+  <div class="chart_buttons_wrap">
+		<button onClick="closeChartdiv1()">Close</button> &nbsp;
+		<button onClick="openChartdiv1()">Open</button>
+		</div><!-- - chart_buttons_wrap - -->
 <div id="chartdiv1" style="width: 100%; height: 400px;"></div>
 </div><!-- - . chart_area_wrap - -->
 	
 <div class="chart_area_wrap">
 	<div class="chart_name">chartdiv3</div>
+	<div class="chart_buttons_wrap">
+		<button onClick="closeChartdiv3()">Close</button> &nbsp;
+		<button onClick="openChartdiv3()">Open</button>
+		</div><!-- - chart_buttons_wrap - -->
 <div id="chartdiv3"></div>
 </div><!-- - . chart_area_wrap - -->
 
 <div class="chart_area_wrap">
 <div class="chat_name">chartdiv4</div>
+<div class="chart_buttons_wrap">
+		<button onClick="closeChartdiv4()">Close</button> &nbsp;
+		<button onClick="openChartdiv4()">Open</button>
+		</div><!-- - chart_buttons_wrap - -->
 <div id="chartdiv4">chartdiv4</div>
 </div><!-- - . chart_area_wrap - -->
 	
 	<div class="chart_area_wrap">
 	<div class="chart_name">chartdiv5</div>
+	<div class="chart_buttons_wrap">
+		<button onClick="closeChartdiv5()">Close</button> &nbsp;
+		<button onClick="openChartdiv5()">Open</button>
+		</div><!-- - chart_buttons_wrap - -->
 <div id="chartdiv5"></div>
 </div><!-- - . chart_area_wrap - -->
 	
 	<div class="chart_area_wrap">
 <div class="chart_name">chartdiv6</div>
+<div class="chart_buttons_wrap">
+		<button onClick="closeChartdiv6()">Close</button> &nbsp;
+		<button onClick="openChartdiv6()">Open</button>
+		</div><!-- - chart_buttons_wrap - -->
 <div id="chartdiv6"></div>
 </div><!-- - . chart_area_wrap - -->
 
     <!-- Styles -->
 <style>
-#chartdiv4 { width: 100%; height: 500px; }
+#chartdiv { display: none; }
+#chartdiv1 { display: none; }
+#chartdiv3 { display: none; }
+	
+#chartdiv4 { display: none; width: 100%; height: 500px; }
 
-#chartdiv5 { width: 100%; height: 500px; }
+#chartdiv5 { display: none; width: 100%; height: 500px; }
 
-#chartdiv6 { width: 100%; height: 500px; }
+#chartdiv6 { display: none; width: 100%; height: 500px; }
 </style>
 
 
