@@ -13,6 +13,8 @@ div.subtitle { font-size: 14px; margin-top: 5px; }
 
 nav { margin: 15px; margin-top: 5px; }
 
+main { padding-bottom: 135px; }
+
 main div.wrap { outline: 1px solid #777;  padding: 15px;  margin: 10px;  position: relative; }
 main div.number { position: absolute; top: 5px; right: 5px; }
 
@@ -34,46 +36,55 @@ main div.number { position: absolute; top: 5px; right: 5px; }
 
 .form_button { text-align: right; }
 
-footer { position: fixed; bottom: 8px; left: 5px; }
+footer { position: fixed; bottom: 0; left: 0; background-color: #fff; right: 0; }
 
-footer div { border: 1px solid #777; padding: 5px; display: inline-block; border-radius: 3px; }
-	
+.footer_data { background-color: white; margin-left: 5px; margin-bottom: 8px; margin-right: 5px;  position: absolute; right: 0; bottom: 0; left: 0; }
+
+footer div { border: 1px solid #777; padding: 5px; display: inline-block; border-radius: 3px;  margin-left: 10px; }
+
+.footer_data div.button { hover: pointer; }
 	
 </style>
 </head>
 <body>
 <div class="top_bar_wrap">
-<div class="sitename"># app ~ `selfie_lunch` Software</div>
-<div class="subtitle">https://github.com/Kyle2501/selfie_lunch</div>
+  <div class="sitename"># app ~ `selfie_lunch` Software</div>
+  <div class="subtitle">https://github.com/Kyle2501/selfie_lunch</div>
 <hr />
-<button onclick="window.location.href='https://github.com/Kyle2501/selfie_lunch'">Repo</button>
-<div class="right_buttons"><button>Nav</button></div>
+  <button onclick="window.location.href='https://github.com/Kyle2501/selfie_lunch'">Repo</button>
+  <div class="right_buttons"><button>Nav</button></div>
 </div>
 
 <div><b>Kitchen Page</b></div>
 <nav>
-<div id="nav1">~ Timer</div>
-<div id="nav2">~ Amount Conversion</div>
-<div id="nav3">~ Recipe Stuff</div>
-<div id="nav4">~ Camera</div>
-<div id="nav5">~ Notes</div>
-<div id="nav6">~ Session Log</div>
+  <div id="nav1">~ Timer</div>
+  <div id="nav2">~ Amount Conversion</div>
+  <div id="nav3">~ Recipe Stuff</div>
+  <div id="nav4">~ Camera</div>
+  <div id="nav5">~ Notes</div>
+  <div id="nav6">~ Session Log</div>
 </nav>
 
 <hr />
 
 <main>
-  <div class="timer_wrap wrap" id="wrap1">Timer
+  <div class="timer_wrap wrap" id="wrap1">
+  	<div class="area_head_wrap">
+  <div class="area_name">Timer</div>
     <div class="number">1</div>
     <div class="close" onClick="close1()">×</div>
+  </div><!-- - . area_head_wrap - -->
     <div class="timer_data_wrap">
     	<div class="clock_outline_wrap"></div>
    </div><!-- - . timer_data_wrap - -->
   </div><!-- - . wrap - -->
 
-<div class="amount_wrap wrap" id="wrap2">Amount Conversion
+<div class="amount_wrap wrap" id="wrap2">
+	<div class="area_head_wrap">
+  <div class="area_name">Amount Conversion</div>
 <div class="number">2</div>
 <div class="close" onClick="close2()">×</div>
+</div><!-- - area_head_wrap - -->
 <div class="amount_data_wrap">
     	<form>
     	<input type="text" />
@@ -82,36 +93,52 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
    </div><!-- - . amount_data_wrap - -->
 </div><!-- - . wrap - -->
 	
-<div class="recipe_wrap wrap" id="wrap3">Recipe Stuff
-<div class="number">3</div>
-<div class="close" onClick="close3()">×</div>
+<div class="recipe_wrap wrap" id="wrap3">
+  <div class="area_head_Wrap">
+    <div class="area_name">Recipe Stuff</div>
+  <div class="number">3</div>
+  <div class="close" onClick="close3()">×</div>
+  </div><!-- - . area_head_wrap - -->
 <div class="recipe_data_wrap">
     	
    </div><!-- - . recipe_data_wrap - -->
 </div><!-- - . wrap - -->
 	
-<div class="camera_wrap wrap" id="wrap4">Camera
-<div class="number">4</div>
-<div class="close" onClick="close4()">×</div>
-<div class="camera_data_wrap">
+<div class="camera_wrap wrap" id="wrap4">
+	<div class="area_head_wrap">
+      <div class="area_name">Camera</div>
+      <div class="number">4</div>
+      <div class="close" onClick="close4()">×</div>
+     </div><!-- - . area_head_wrap - -->
+  <div class="camera_data_wrap">
     	
    </div><!-- - . camera_data_wrap - -->
 </div><!-- - . wrap - -->
 	
-<div class="notes_wrap wrap" id="wrap5">Notes
-<div class="number">5</div>
-<div class="close" onClick="close5()">×</div>
+<div class="notes_wrap wrap" id="wrap5">
+	<div class="area_head_wrap">
+      <div class="area_name">Notes</div>
+      <div class="number">5</div>
+      <div class="close" onClick="close5()">×</div>
+  </div><!-- - . area_head_wrap - -->
 <div class="notes_data_wrap">
     	
    </div><!-- - . notes_data_wrap - -->
 </div><!-- - . wrap - -->
 	
-	<div class="notes_wrap wrap" id="wrap6">Session Log
-<div class="number">6</div>
-<div class="close" onClick="close6()">×</div>
+<div class="notes_wrap wrap" id="wrap6">
+	<div classs="area_head_wrap">
+    <div class="area_name">Session Log</div>
+    <div class="number">6</div>
+    <div class="close" onClick="close6()">×</div>
+  </div><!-- - area_head_wrap - -->
 <div class="log_data_wrap">
     	
    </div><!-- - . log_data_wrap - -->
+   	<div class="log_button_wrap">
+   	<button>Clear</button> &nbsp;
+       <button>Save</div>
+   </div>
 </div><!-- - . wrap - -->
 	
 	
@@ -119,12 +146,14 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
 </main>
 
 <footer>
-<div class="button" onClick="open1()">1</div>
-<div class="button" onClick="open2()">2</div>
-<div class="button" onClick="open3()">3</div>
-<div class="button" onClick="open4()">4</div>
-<div class="button" onClick="open5()">5</div>
-<div class="button" onClick="open6()">6</div>
+	<div class="footer_data">
+  <div class="button" onClick="open1()">1</div>
+  <div class="button" onClick="open2()">2</div>
+  <div class="button" onClick="open3()">3</div>
+  <div class="button" onClick="open4()">4</div>
+  <div class="button" onClick="open5()">5</div>
+  <div class="button" onClick="open6()">6</div>
+  </div>
 </footer>
 
 <script>
@@ -218,4 +247,3 @@ function close() {
 
 </body>
 </html>
-
