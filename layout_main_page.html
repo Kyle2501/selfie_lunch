@@ -26,7 +26,16 @@ main div.number { position: absolute; top: 5px; right: 5px; }
 .log_wrap { display: none; }
 
 .timer_data_wrap { outline: 2px dashed #aaa; width: 185px; height: 185px; margin: 0 auto; }
-.amount_data_wrap { outline: 2px dashed #aaa; width: 225px; height: 85px; padding: 5px; }
+
+.amount_data_wrap { outline: 2px dashed #aaa; height: 125px; padding: 10px; }
+
+.amount_data_form { outline: 2px dashed #aaa; width: 205px; height: 85%; padding: 5px;  display: inline-block; vertical-align: top; margin-right: 10px; }
+
+.amount_data_form .form_button { margin: 10px; }
+.amount_data_form .amount_box { height: 28px; }
+
+.amount_data_output { display: inline-block; width: 85px; height: 95px; outline: 1px dashed #999; }
+
 .recipe_data_wrap { outline: 2px dashed #aaa; width: 45%; height: 85px; }
 .camera_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
 .notes_data_wrap { outline: 2px dashed #aaa; width: 85px; height: 85px; }
@@ -37,6 +46,9 @@ main div.number { position: absolute; top: 5px; right: 5px; }
 .chart_list_item { border: 1px solid #888; border-radius: 4px; width: 105px;  padding: 4px; }
 
 .form_button { text-align: right; }
+
+
+
 
 footer { position: fixed; bottom: 0; left: 0; background-color: #fff; right: 0; }
 
@@ -77,55 +89,33 @@ footer div { border: 1px solid #777; padding: 5px; display: inline-block; border
 <script>
 
 function openChartdiv() {
-  chartdiv.style.display = "block";
-};
-
+  chartdiv.style.display = "block";   /* -- */  };
 function openChartdiv1() {
-  chartdiv1.style.display = "block";
-};
-
+  chartdiv1.style.display = "block";   /* -- */  };
 function openChartdiv6() {
-  chartdiv6.style.display = "block";
-};
-
+  chartdiv6.style.display = "block";   /* -- */  };
 function openChartdiv3() {
-  chartdiv3.style.display = "block";
-};
-
+  chartdiv3.style.display = "block";   /* -- */  };
 function openChartdiv4() {
-  chartdiv4.style.display = "block";
-};
-
+  chartdiv4.style.display = "block";  /* -- */  };
 function openChartdiv5() {
-  chartdiv5.style.display = "block";
-};
+  chartdiv5.style.display = "block";  /* -- */  };
 
 // ---
 function closeChartdiv() {
-  chartdiv.style.display = "none";
-};
-
+  chartdiv.style.display = "none";   /* -- */  };
 function closeChartdiv1() {
-  chartdiv1.style.display = "none";
-};
-
+  chartdiv1.style.display = "none";   /* -- */  };
 function closeChartdiv6() {
-  chartdiv6.style.display = "none";
-};
-
+  chartdiv6.style.display = "none";   /* -- */  };
 function closeChartdiv3() {
-  chartdiv3.style.display = "none";
-};
-
+  chartdiv3.style.display = "none";   /* -- */  };
 function closeChartdiv4() {
-  chartdiv4.style.display = "none";
-};
-
+  chartdiv4.style.display = "none";   /* -- */  };
 function closeChartdiv5() {
-  chartdiv5.style.display = "none";
-};
+  chartdiv5.style.display = "none";   /* -- */  };
 	
-	</script>
+</script>
 
 <main>
   <div class="timer_wrap wrap" id="wrap1">
@@ -736,20 +726,30 @@ setInterval(() => {
 
   </div><!-- - . wrap - -->
 
+
+<!-- - . Amount Conversion - -->
 <div class="amount_wrap wrap" id="wrap2">
-	<div class="area_head_wrap">
-  <div class="area_name">Amount Conversion</div>
-<div class="number">2</div>
-<div class="close" onClick="close2()">×</div>
+  <div class="area_head_wrap">
+    <div class="area_name">Amount Conversion</div>
+    <div class="number">2</div>
+    <div class="close" onClick="close2()">×</div>
 </div><!-- - area_head_wrap - -->
 <div class="amount_data_wrap">
-    	<form>
-    	<input type="text" />
-    <div class="form_button"><input type="submit" value="Search"></div>
-    </form>
-   </div><!-- - . amount_data_wrap - -->
+  <div class="amount_data_form">
+      <input class="amount_box" type="text" />
+      <div class="form_button">
+        <button>Clear</button> &nbsp;
+        <button>Search</button>
+      </div>
+    </div><!-- - . amount_data_form - -->
+    <div class="amount_data_output">
+    	
+   </div><!-- - . amount_data_output - -->
+</div><!-- - . amount_data_wrap - -->
 </div><!-- - . wrap - -->
 	
+	
+<!-- - . Recipe Stuff - -->
 <div class="recipe_wrap wrap" id="wrap3">
   <div class="area_head_Wrap">
     <div class="area_name">Recipe Stuff</div>
@@ -760,7 +760,9 @@ setInterval(() => {
     	
    </div><!-- - . recipe_data_wrap - -->
 </div><!-- - . wrap - -->
-	
+
+
+<!-- - . Camera - -->
 <div class="camera_wrap wrap" id="wrap4">
 	<div class="area_head_wrap">
       <div class="area_name">Camera</div>
@@ -771,7 +773,9 @@ setInterval(() => {
     	
    </div><!-- - . camera_data_wrap - -->
 </div><!-- - . wrap - -->
-	
+
+
+<!-- - . Notes - -->
 <div class="notes_wrap wrap" id="wrap5">
 	<div class="area_head_wrap">
       <div class="area_name">Notes</div>
