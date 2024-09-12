@@ -1,4 +1,4 @@
- // # ~ . ~
+ // # ~ . ~ Selfie Lunch Software
 // ,  ° . +
 package main
 
@@ -161,100 +161,38 @@ func world(w http.ResponseWriter, r *http.Request) {
     pageData := pagePath
     pageName := "hi test"
     
-    if pagePath == "/page/classSchedule" {
-      pageName = "classSchedule Page"
+    if pagePath == "/page/Timer" {
+      pageName = "Timer Page"
  //     pageList = pageList
   }
   
-  if pagePath == "/page/studentAttenance" {
-    pageName = "studentAttenance Page"
+  if pagePath == "/page/Amount Conversion" {
+    pageName = "Amount Conversion Page"
     //     pageList = pageList
   }
   
-    if pagePath == "/page/studentProfiles" {
-    pageName = "studentProfiles Page"
+    if pagePath == "/page/Recipe Stuff" {
+    pageName = "Recipe Stuff Page"
     //     pageList = pageList
   }
   
-    if pagePath == "/page/paymentInformation" {
-    pageName = "paymentInformation Page"
+    if pagePath == "/page/Camera" {
+    pageName = "Camera Page"
     //     pageList = pageList
   }
   
-      if pagePath == "/page/classEvent" {
-    pageName = "classEvent Page"
+      if pagePath == "/page/Notes" {
+    pageName = "Notes Page"
     //     pageList = pageList
   }
   
-      if pagePath == "/page/studentHomework" {
-    pageName = "studentHomework Page"
+      if pagePath == "/page/Session Log" {
+    pageName = "Session Log Page"
     //     pageList = pageList
   }
   
-      if pagePath == "/page/classQuestions" {
-    pageName = "classQuestions Page"
-    //     pageList = pageList
-  }
+
   
-        if pagePath == "/page/studentFeildtrip" {
-    pageName = "studentFeildtrip Page"
-    //     pageList = pageList
-  }
-  
-        if pagePath == "/page/classMovies" {
-    pageName = "classMovies Page"
-    //     pageList = pageList
-  }
-  
-        if pagePath == "/page/studentWorkshops" {
-    pageName = "studentWorkshops Page"
-    //     pageList = pageList
-  }
-  
-       if pagePath == "/page/listClass" {
-    pageName = "listClass Page"
-    //     pageList = pageList
-  }
-  
-       if pagePath == "/page/loadClass" {
-    pageName = "loadClass Page"
-    //     pageList = pageList
-  }
-  
-       if pagePath == "/page/joinClass" {
-    pageName = "joinClass Page"
-    //     pageList = pageList
-  }
-  
-         if pagePath == "/page/leaveClass" {
-    pageName = "leaveClass Page"
-    //     pageList = pageList
-  }
-  
-         if pagePath == "/page/addHomework" {
-    pageName = "addHomework Page"
-    //     pageList = pageList
-  }
-  
-         if pagePath == "/page/startClass" {
-    pageName = "startClass Page"
-    //     pageList = pageList
-  }
-  
-           if pagePath == "/page/meetTeacher" {
-    pageName = "meetTeacher Page"
-    //     pageList = pageList
-  }
-  
-           if pagePath == "/page/askQuestions" {
-    pageName = "askQuestions Page"
-    //     pageList = pageList
-  }
-  
-           if pagePath == "/page/meetStudents" {
-    pageName = "meetStudents Page"
-    //     pageList = pageList
-  }
 
 
 // ,  ° . +
@@ -263,25 +201,12 @@ func world(w http.ResponseWriter, r *http.Request) {
             PagePath: pageData,
             PageName: pageName,
             SOSNav: []navList{
-                {Title: "classSchedule", Done: false},
-                {Title: "studentProfiles", Done: true},
-                {Title: "paymentInformation", Done: true},
-                {Title: "studentAttenance", Done: true},
-                {Title: "classEvent", Done: true},
-                {Title: "studentHomework", Done: true},
-                {Title: "studentFeildtrip", Done: true},
-                {Title: "classQuestions", Done: true},
-                {Title: "classMovies", Done: true},
-                {Title: "studentWorkshops", Done: true},
-                {Title: "listClass", Done: true},
-                {Title: "loadClass", Done: true},
-                {Title: "joinClass", Done: true},
-                {Title: "leaveClass", Done: true},
-                {Title: "addHomework", Done: true},
-                {Title: "startClass", Done: true},
-                {Title: "meetTeacher", Done: true},
-                {Title: "askQuestions", Done: true},
-                {Title: "meetStudents", Done: true},
+                {Title: "Timer", Done: false},
+                {Title: "Amount Conversion", Done: true},
+                {Title: "Recipe Stuff", Done: true},
+                {Title: "Camera", Done: true},
+                {Title: "Notes", Done: true},
+                {Title: "Session Log", Done: true},
         
             },
         }
@@ -301,30 +226,13 @@ func world(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 // ,  ° . +
-  appName := "~ . - // - Website App"
+  appName := "~ . - Selfie Lunch Software // - Website App"
   
   http.HandleFunc("/hello", hello)
     http.HandleFunc("/world", world)
   // ,  ° . +
-    http.HandleFunc("/page/classSchedule", world)
-    http.HandleFunc("/page/studentFeildtrip", world)
-    http.HandleFunc("/page/classMovies", world)
-    http.HandleFunc("/page/studentProfiles", world)
-    http.HandleFunc("/page/paymentInformation", world)
-    http.HandleFunc("/page/studentAttenance", world)
-    http.HandleFunc("/page/classEvent", world)
-    http.HandleFunc("/page/studentHomework", world)
-      http.HandleFunc("/page/classQuestions", world)
-      http.HandleFunc("/page/studentWorkshops", world)
-      http.HandleFunc("/page/listClass", world)
-      http.HandleFunc("/page/loadClass", world)
-      http.HandleFunc("/page/joinClass", world)
-      http.HandleFunc("/page/leaveClass", world)
-      http.HandleFunc("/page/addHomework", world)
-      http.HandleFunc("/page/startClass", world)
-         http.HandleFunc("/page/meetTeacher", world)
-          http.HandleFunc("/page/askQuestions", world)
-         http.HandleFunc("/page/meetStudents", world)
+    http.HandleFunc("/page/kitchen", world)
+    
           
 
 // ,  ° . +
