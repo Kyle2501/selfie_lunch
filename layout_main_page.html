@@ -786,22 +786,48 @@ setInterval(() => {
     	
    </div><!-- - . notes_data_wrap - -->
 </div><!-- - . wrap - -->
-	
+
+
+<style>
+.log_button_wrap { margin: 15px; }
+
+
+</style>
+
+<!-- - . Session Log - -->
 <div class="notes_wrap wrap" id="wrap6">
 	<div classs="area_head_wrap">
     <div class="area_name">Session Log</div>
     <div class="number">6</div>
     <div class="close" onClick="close6()">×</div>
   </div><!-- - area_head_wrap - -->
-<div class="log_data_wrap">
-    	
+  <div class="log_data_wrap">
+    	<div id="log_data"></div>
+    
    </div><!-- - . log_data_wrap - -->
    	<div class="log_button_wrap">
+   	<button onClick="prepSession_log('1')">Test</button> &nbsp;
    	<button>Clear</button> &nbsp;
        <button>Save</div>
    </div>
 </div><!-- - . wrap - -->
-	
+
+
+<script>
+
+function addSession_log(session_data) {
+  var session_data = session_data;
+  log_data.append(session_data);
+};
+
+function prepSession_log(session_data) {
+var session_data = session_data;
+
+addSession_log(session_data);
+
+};
+
+</script>
 	
 <div id="main_view"></div>
 </main>
