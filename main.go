@@ -152,8 +152,13 @@ func hello(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Hello!")
 }
 
-
 func world(w http.ResponseWriter, r *http.Request) {
+//	pagePath := r.URL.Path
+    fmt.Fprintf(w, "World!")
+}
+
+// ,  ° . +
+func kitchenPage_world(w http.ResponseWriter, r *http.Request) {
 	pagePath := r.URL.Path
    // fmt.Fprintf(w, "World!")
    // fmt.Fprintf(w, pagePath)
@@ -161,32 +166,32 @@ func world(w http.ResponseWriter, r *http.Request) {
     pageData := pagePath
     pageName := "hi test"
     
-    if pagePath == "/page/Timer" {
+    if pagePath == "/page/timer" {
       pageName = "Timer Page"
  //     pageList = pageList
   }
   
-  if pagePath == "/page/Amount Conversion" {
+  if pagePath == "/page/amount_conversion" {
     pageName = "Amount Conversion Page"
     //     pageList = pageList
   }
   
-    if pagePath == "/page/Recipe Stuff" {
+    if pagePath == "/page/recipe_stuff" {
     pageName = "Recipe Stuff Page"
     //     pageList = pageList
   }
   
-    if pagePath == "/page/Camera" {
+    if pagePath == "/page/camera" {
     pageName = "Camera Page"
     //     pageList = pageList
   }
   
-      if pagePath == "/page/Notes" {
+      if pagePath == "/page/nbotes" {
     pageName = "Notes Page"
     //     pageList = pageList
   }
   
-      if pagePath == "/page/Session Log" {
+      if pagePath == "/page/session_log" {
     pageName = "Session Log Page"
     //     pageList = pageList
   }
@@ -217,8 +222,82 @@ func world(w http.ResponseWriter, r *http.Request) {
   pageFilePath := template.Must(
     template.ParseFiles(pageHTML))
   pageFilePath.Execute(w, data)
+}
+
+func worldLoader(w http.ResponseWriter, r *http.Request) {
+//	pagePath := r.URL.Path
+    fmt.Fprintf(w, "World!")
+    
+  if pagePath == "/page/Menu" {
+    pageName = "Menu Page"
+    //     pageList = pageList
+  }
   
+  if pagePath == "/page/Location" {
+    pageName = "Location Page"
+    //     pageList = pageList
+  }
   
+  if pagePath == "/page/Equiptment" {
+    pageName = "Equiptment Page"
+    //     pageList = pageList
+  }
+  
+  if pagePath == "/page/Staff" {
+    pageName = "Staff Page"
+    //     pageList = pageList
+  }
+  
+  if pagePath == "/page/Services" {
+    pageName = "Services Page"
+    //     pageList = pageList
+  }
+  
+  if pagePath == "/page/Music" {
+    pageName = "Music Page"
+    //     pageList = pageList
+  }
+  
+  if pagePath == "/page/Setting" {
+    pageName = "Setting Page"
+    //     pageList = pageList
+  }
+  
+  if pagePath == "/page/Sources" {
+    pageName = "Sources Page"
+    //     pageList = pageList
+  }
+  
+  if pagePath == "/page/Marketing" {
+    pageName = "Marketing Page"
+    //     pageList = pageList
+  }
+  
+  if pagePath == "/page/Operations" {
+    pageName = "Operations Page"
+    //     pageList = pageList
+  }
+  
+  if pagePath == "/page/Software" {
+    pageName = "Software Page"
+    //     pageList = pageList
+  }
+  
+  if pagePath == "/page/Events" {
+    pageName = "Events Page"
+    //     pageList = pageList
+  }
+  
+  if pagePath == "/page/Seating" {
+    pageName = "Seating Page"
+    //     pageList = pageList
+  }
+  
+  if pagePath == "/page/Hours" {
+    pageName = "Hours Page"
+    //     pageList = pageList
+  }
+    
 }
 
 //  .  html url routes 
@@ -231,12 +310,27 @@ func main() {
   http.HandleFunc("/hello", hello)
     http.HandleFunc("/world", world)
   // ,  ° . +
-    http.HandleFunc("/page/kitchen", world)
+    http.HandleFunc("/page/kitchen", kitchenPage_world)
     
           
 
 // ,  ° . +
-  http.HandleFunc("/", indexHandler)
+  http.HandleFunc("/Menu", worldLoader)
+  http.HandleFunc("/Location", worldLoader)
+  http.HandleFunc("/Equiptment", worldLoader)
+  http.HandleFunc("/Staff", worldLoader)
+  http.HandleFunc("/Services", worldLoader)
+  http.HandleFunc("/Music", worldLoader)
+  http.HandleFunc("/Setting", worldLoader)
+  http.HandleFunc("/Sources", worldLoader)
+  http.HandleFunc("/Marketing", worldLoader)
+  http.HandleFunc("/Operations", worldLoader)
+  http.HandleFunc("/Software", worldLoader)
+  http.HandleFunc("/Events", worldLoader)
+  http.HandleFunc("/Seating", worldLoader)
+  http.HandleFunc("/Hours", worldLoader)
+  
+
   
   // ,  ° . +
   http.HandleFunc("/one", testHandler)
