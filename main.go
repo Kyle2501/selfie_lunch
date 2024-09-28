@@ -301,8 +301,8 @@ func worldLoader(w http.ResponseWriter, r *http.Request) {
   
   // ,  ° . +
     data := SOSPageData{
-            PageTitle: pageData,
-            PagePath: pageData,
+            PageTitle: pageName,
+            PagePath: pageName,
             PageName: pageName,
             SOSNav: []navList{
                 {Title: "Timer", Done: false},
