@@ -225,8 +225,9 @@ func kitchenPage_world(w http.ResponseWriter, r *http.Request) {
 }
 
 func worldLoader(w http.ResponseWriter, r *http.Request) {
-//	pagePath := r.URL.Path
+	pagePath := r.URL.Path
     fmt.Fprintf(w, "World!")
+    pageName := "test"
     
   if pagePath == "/page/Menu" {
     pageName = "Menu Page"
