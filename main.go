@@ -323,7 +323,6 @@ func worldLoader(w http.ResponseWriter, r *http.Request) {
   pageFilePath.Execute(w, data)
 }
     
-}
 
 //  .  html url routes 
 //  .  as well as terminal cli logs
