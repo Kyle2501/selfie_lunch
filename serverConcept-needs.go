@@ -1,126 +1,82 @@
- // # ~ . ~ Selfie Lunch Software
-// ,  ° . +
-package main
+<!doctype html>
+<html>
+<head>
 
-import (
-    "os"
-    "log"
-    
-    "fmt"
-		
-	"text/template"
-	"net/http"
+<style>
 	
-//	"time"
+	tr { text-align: center; }
+	
+	th { border-bottom: 2px solid #000; }
+	
+	</style>
 
-)
+</head>
+<body>
+<div class="top_bar">
+#! - Selfie_Lunch, Concept List Page
 
-// ,  ° . +
-type SOSPageData struct {
-    PageTitle string
-    PagePath string
-    PageName string
-    SOSNav     []navList
-}
+<br /><hr /> 
+</div><!-- - top_bar - -->
+	
+<main>
 
+<div class="goal_list_wrap">
+	<p><b>_ Goal List</b><ul>
+		<li>_ Active Loco Moco Bus by Summer 2025</li>
+		</ul></p>
+</div>
 
-// . indexHandler,  ~ for Public Pages °
-func indexHandler(w http.ResponseWriter, r *http.Request) {
-// ,  ° . +
-    if r.URL.Path != "/" {
-    	http.NotFound(w, r)
-    	return
-    }
+<hr />
 
-// , ° . +
-  pageTitle := "~ . - // - Website App"
-  pagePath := r.URL.Path
-  // pageType := ".."
-  
- 
-// ,  ° . +
-  pageFilePath := template.Must(
-    template.ParseFiles(pageHTML))
-  pageFilePath.Execute(w, pageData)
-  
-}  //  .  indexHandler
+<div class="area_wrap">
+	
+<table>
+  <tr>
+    <th>- &nbsp; Develop -</th>
+    <th>-  &nbsp; Active -</th>
+  </tr>
+  <tr>
+  	<td>Dec</td>
+      <td>May 2025</td>
+      </tr>
+      <tr>
+      	<td>Jan</td>
+      <td>Jun</td>
+      </tr>
+      <tr>
+      	<td>Feb</td>
+      <td>July</td>
+      </tr>
+      <tr>
+      	<td>March</td>
+      <td>Aug</td>
+      </tr>
+      <tr>
+      	<td>April</td>
+      <td>Sept</td>
+      </tr>
+</table>
 
+</div><!-- - . area_wrap - -->
 
-func hello(w http.ResponseWriter, r *http.Request) {
-//	pagePath := r.URL.Path
-    fmt.Fprintf(w, "Hello!")
-}
+<br />
+<hr />
+<br />
 
-func world(w http.ResponseWriter, r *http.Request) {
-//	pagePath := r.URL.Path
-    fmt.Fprintf(w, "World!")
-}
-
-// ,  ° . +
-func kitchenPage_world(w http.ResponseWriter, r *http.Request) {
-	pagePath := r.URL.Path
-   // fmt.Fprintf(w, "World!")
-   // fmt.Fprintf(w, pagePath)
-    
-    pageData := pagePath
-    pageName := "hi test"
-    
-    if pagePath == "/page/timer" {
-      pageName = "Timer Page"
- //     pageList = pageList
-  }
-  
-  if pagePath == "/page/amount_conversion" {
-    pageName = "Amount Conversion Page"
-    //     pageList = pageList
-  }
-
-
-    if pagePath == "/needs_list-a/Equiptment" {
-      pageName = "Equiptment Page"
- //     pageList = pageList
-  }
-
-    if pagePath == "/needs_list-a/Employees" {
-      pageName = "Employees Page"
- //     pageList = pageList
-  }
-  
-     if pagePath == "/needs_list-a/Ingredients" {
-      pageName = "Ingredients Page"
- //     pageList = pageList
-  } 
-  
-      if pagePath == "/needs_list-a/Process" {
-      pageName = "Process Page"
- //     pageList = pageList
-  }
-  
-      if pagePath == "/needs_list-a/Menu" {
-      pageName = "Menu Page"
- //     pageList = pageList
-  }
-  
-        if pagePath == "/needs_list-a/Vehicle" {
-      pageName = "Vehicle Page"
- //     pageList = pageList
-  }
-  
-        if pagePath == "/needs_list-a/Software" {
-      pageName = "Software Page"
- //     pageList = pageList
-  }
-  
-        if pagePath == "/needs_list-a/Brand" {
-      pageName = "Brand Page"
- //     pageList = pageList
-  }
-  
-        if pagePath == "/needs_list-a/Sales" {
-      pageName = "Sales Page"
- //     pageList = pageList
-  }
-
+<div class="concept_list_wrap">
+	<p><b>_ Supporting Concepts</b><ul>
+		<li>_ Foccacia Hands</li>
+		<li>_ Honolulu Lemonade</li>
+		<li>_ Loco Moco Bus</li>
+		
+	</ul></p>
+	
+</div><!-- - . concept_list_wrap - -->
+	
+	<br />
+	<hr />
+	<br />
+	
 <div class="concept_needs_list">
 	<p><b>_ Concept Needs List A</b><ul>
 		<li>_ Equiptment</li>
@@ -144,64 +100,143 @@ func kitchenPage_world(w http.ResponseWriter, r *http.Request) {
     <li>_ Software</li>
 <li>_ Sales</li>	
    </ul></p>
-  
- // ,  ° . +
-    data := SOSPageData{
-            PageTitle: pageData,
-            PagePath: pageData,
-            PageName: pageName,
-            SOSNav: []navList{
-                {Title: "Timer", Done: false},
-                {Title: "Amount Conversion", Done: true},
-                {Title: "Recipe Stuff", Done: true},
-                {Title: "Camera", Done: true},
-                {Title: "Notes", Done: true},
-                {Title: "Session Log", Done: true},
-        
-            },
-        }
- 
- pageHTML := "layout_main_page.html";
- 
-  // ,  ° . +
-  pageFilePath := template.Must(
-    template.ParseFiles(pageHTML))
-  pageFilePath.Execute(w, data)
-}
-   
-   
-   //  .  html url routes 
-//  .  as well as terminal cli logs
 
-func main() {
-// ,  ° . +
-  appName := "~ . - Selfie Lunch Software // - Website App"
-  
-  http.HandleFunc("/hello", hello)
-    http.HandleFunc("/world", world)
-  // ,  ° . +
-     
-  // ,  ° . +
-  http.HandleFunc("/one", testHandler)
+</div><!-- - . concept_needs_list - -->
+	
+	<br /><hr /><br />
+	
+<div class="concept_needs_list">
+  <p><b>_ Concept Needs List B</b><ul>
+   <li>_ People<ul>
+    <li>_ Manager</li>
+    <li>_ Driver</li>
+    <li>_ Cook</li>
+    <li>_ Staff</li>
+</ul></li>
+  <li>_ Booth<ul>
+  	<li>_ Location</li>
+  <li>_ Structure</li>
+</ul></li>
+  <li>_ Product<ul>
+    <li>_ Edible Parts</li>
+    <li>_ Packaging</li>
+   </ul> 
+    <li>_ Brand<ul>
+  <li>_ Clothes</li>
+  <li>_ Stickers</li>
+  <li>_ Flyers</li>
+  <li>_ Posters</li>
+  <li>_ Bags</li>
+  <li>_ Swag</li>
+  <li>_ Merch</li>
+</ul></li>
+    <li>_ Software</li>
+<li>_ Sales</li>	
+   </ul></p>
 
-// . ° ~ +
- // http.HandleFunc("/page/classSchedule", indexHandler)
+</div><!-- - . concept_needs_list - -->
+	
+		<br /><hr /><br />
+	
+<div class="concept_needs_list">
+  <p><b>_ Concept Needs List B</b><ul>
+   <li>_ People<ul>
+    <li>_ Manager</li>
+    <li>_ Driver</li>
+    <li>_ Cook</li>
+    <li>_ Staff</li>
+</ul></li>
+   </ul></p>
 
-// -- -
-  port := os.Getenv("PORT")
-  if port == "" {
-    port = "8080"
-    log.Printf("Loading _webapp with default port")
-  }
-  
-// ,  ° . +
-  log.Printf("_webapp is active and Listening on port %s", port)
+</div><!-- - . concept_needs_list - -->
+		<br /><hr /><br />
+<div class="concept_needs_list">
+  <p><b>_ Concept Needs List B</b><ul>
+  <li>_ Booth<ul>
+  	<li>_ Location</li>
+  <li>_ Structure</li>
+</ul></li>
+   </ul></p>
 
-  log.Printf("// -- - %s", appName)
-  log.Printf("_webapp now loaded and running at http://localhost:%s", port)
+</div><!-- - . concept_needs_list - -->
+		<br /><hr /><br />
+<div class="concept_needs_list">
+  <p><b>_ Concept Needs List B</b><ul>
+  <li>_ Product<ul>
+    <li>_ Edible Parts</li>
+    <li>_ Packaging</li>
+   </ul> 
+      </ul></p>
 
-// -- - 
-  if err := http.ListenAndServe(":"+port, nil); err != nil {
-    log.Fatal("Error Starting the HTTP Server :", err)
-    return
-  }}
+</div><!-- - . concept_needs_list - -->
+   		<br /><hr /><br />
+<div class="concept_needs_list">
+  <p><b>_ Concept Needs List B</b><ul>
+    <li>_ Brand<ul>
+  <li>_ Clothes</li>
+  <li>_ Stickers</li>
+  <li>_ Flyers</li>
+  <li>_ Posters</li>
+  <li>_ Bags</li>
+  <li>_ Swag</li>
+  <li>_ Merch</li>
+</ul></li>
+   </ul></p>
+
+</div><!-- - . concept_needs_list - -->
+		<br /><hr /><br />
+<div class="concept_needs_list">
+  <p><b>_ Concept Needs List B</b><ul>
+    <li>_ Software</li>
+       </ul></p>
+
+</div><!-- - . concept_needs_list - -->
+    		<br /><hr /><br />
+<div class="concept_needs_list">
+  <p><b>_ Concept Needs List B</b><ul>
+<li>_ Sales</li>	
+   </ul></p>
+
+</div><!-- - . concept_needs_list - -->
+	
+		<br /><hr /><br />
+	
+<div class="concept_needs_list">
+  <p><b>_ Concept Needs List B</b><ul>
+   <li>_ People<ul>
+    <li>_ Manager</li>
+    <li>_ Driver</li>
+    <li>_ Cook</li>
+    <li>_ Staff</li>
+</ul></li>
+  <li>_ Booth<ul>
+  	<li>_ Location</li>
+  <li>_ Structure</li>
+</ul></li>
+  <li>_ Product<ul>
+    <li>_ Edible Parts</li>
+    <li>_ Packaging</li>
+   </ul> 
+    <li>_ Brand<ul>
+  <li>_ Clothes</li>
+  <li>_ Stickers</li>
+  <li>_ Flyers</li>
+  <li>_ Posters</li>
+  <li>_ Bags</li>
+  <li>_ Swag</li>
+  <li>_ Merch</li>
+</ul></li>
+    <li>_ Software</li>
+<li>_ Sales</li>	
+   </ul></p>
+
+</div><!-- - . concept_needs_list - -->
+	
+	
+	
+
+	
+</main>
+
+</body>
+</html>
