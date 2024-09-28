@@ -76,6 +76,51 @@ func kitchenPage_world(w http.ResponseWriter, r *http.Request) {
   }
 
 
+    if pagePath == "/needs_list-a/Equiptment" {
+      pageName = "Equiptment Page"
+ //     pageList = pageList
+  }
+
+    if pagePath == "/needs_list-a/Employees" {
+      pageName = "Employees Page"
+ //     pageList = pageList
+  }
+  
+     if pagePath == "/needs_list-a/Ingredients" {
+      pageName = "Ingredients Page"
+ //     pageList = pageList
+  } 
+  
+      if pagePath == "/needs_list-a/Process" {
+      pageName = "Process Page"
+ //     pageList = pageList
+  }
+  
+      if pagePath == "/needs_list-a/Menu" {
+      pageName = "Menu Page"
+ //     pageList = pageList
+  }
+  
+        if pagePath == "/needs_list-a/Vehicle" {
+      pageName = "Vehicle Page"
+ //     pageList = pageList
+  }
+  
+        if pagePath == "/needs_list-a/Software" {
+      pageName = "Software Page"
+ //     pageList = pageList
+  }
+  
+        if pagePath == "/needs_list-a/Brand" {
+      pageName = "Brand Page"
+ //     pageList = pageList
+  }
+  
+        if pagePath == "/needs_list-a/Sales" {
+      pageName = "Sales Page"
+ //     pageList = pageList
+  }
+
 <div class="concept_needs_list">
 	<p><b>_ Concept Needs List A</b><ul>
 		<li>_ Equiptment</li>
