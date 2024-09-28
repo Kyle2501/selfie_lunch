@@ -120,6 +120,7 @@
   <li>_ Product<ul>
     <li>_ Edible Parts</li>
     <li>_ Packaging</li>
+    <li>_ Price</li>
    </ul> 
     <li>_ Brand<ul>
   <li>_ Clothes</li>
@@ -165,6 +166,7 @@
   <li>_ Product<ul>
     <li>_ Edible Parts</li>
     <li>_ Packaging</li>
+    <li>_ Price</li>
    </ul> 
       </ul></p>
 
@@ -216,6 +218,7 @@
   <li>_ Product<ul>
     <li>_ Edible Parts</li>
     <li>_ Packaging</li>
+    <li>_ Price</li>
    </ul> 
     <li>_ Brand<ul>
   <li>_ Clothes</li>
