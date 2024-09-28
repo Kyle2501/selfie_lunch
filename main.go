@@ -298,6 +298,30 @@ func worldLoader(w http.ResponseWriter, r *http.Request) {
     pageName = "Hours Page"
     //     pageList = pageList
   }
+  
+  // ,  ° . +
+    data := SOSPageData{
+            PageTitle: pageData,
+            PagePath: pageData,
+            PageName: pageName,
+            SOSNav: []navList{
+                {Title: "Timer", Done: false},
+                {Title: "Amount Conversion", Done: true},
+                {Title: "Recipe Stuff", Done: true},
+                {Title: "Camera", Done: true},
+                {Title: "Notes", Done: true},
+                {Title: "Session Log", Done: true},
+        
+            },
+        }
+ 
+ pageHTML := "layout_main_page.html";
+ 
+  // ,  ° . +
+  pageFilePath := template.Must(
+    template.ParseFiles(pageHTML))
+  pageFilePath.Execute(w, data)
+}
     
 }
 
