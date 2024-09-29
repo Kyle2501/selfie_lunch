@@ -216,7 +216,7 @@ func kitchenPage_world(w http.ResponseWriter, r *http.Request) {
             },
         }
  
- pageHTML := "layout_main_page.html";
+ pageHTML := "layout_kitchen_page.html";
  
   // ,  ° . +
   pageFilePath := template.Must(
@@ -226,7 +226,7 @@ func kitchenPage_world(w http.ResponseWriter, r *http.Request) {
 
 func worldLoader(w http.ResponseWriter, r *http.Request) {
 	pagePath := r.URL.Path
-    fmt.Fprintf(w, "World!")
+    // fmt.Fprintf(w, "World!")
     pageName := "test"
     
   if pagePath == "/page/Menu" {
@@ -336,7 +336,7 @@ func main() {
   // ,  ° . +
     http.HandleFunc("/page/kitchen", kitchenPage_world)
     
-          
+          http.HandleFunc("/", testHandler)
 
 // ,  ° . +
   http.HandleFunc("/Menu", worldLoader)
