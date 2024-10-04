@@ -337,6 +337,21 @@ func main() {
     http.HandleFunc("/page/kitchen", kitchenPage_world)
     
           http.HandleFunc("/", testHandler)
+          
+  // ,  ° . +
+    http.HandleFunc("/concepts/index", worldLoader)
+    http.HandleFunc("/concepts/Loco-Moco-Bus", worldLoader)
+    http.HandleFunc("/concepts/Kitchen-Page", worldLoader)
+    http.HandleFunc("/concepts/Honolulu-Lemonade", worldLoader)
+    http.HandleFunc("/concepts/Focaccia-Hands", worldLoader)
+    
+    
+   // ,  ° . +
+    http.HandleFunc("/courses/index", worldLoader)
+    http.HandleFunc("/courses/CSS-Layout", worldLoader)
+    http.HandleFunc("/courses/Culniary-Manager", worldLoader)
+    http.HandleFunc("/courses/Food-Handler", worldLoader)
+    http.HandleFunc("/courses/System-Administrator", worldLoader)
 
 // ,  ° . +
   http.HandleFunc("/Menu", worldLoader)
