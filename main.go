@@ -197,9 +197,6 @@ func kitchenPage_world(w http.ResponseWriter, r *http.Request) {
   }
   
 
-  
-
-
 // ,  ° . +
     data := SOSPageData{
             PageTitle: pageData,
@@ -224,6 +221,8 @@ func kitchenPage_world(w http.ResponseWriter, r *http.Request) {
   pageFilePath.Execute(w, data)
 }
 
+
+// - . -
 func worldLoader(w http.ResponseWriter, r *http.Request) {
 	pagePath := r.URL.Path
     // fmt.Fprintf(w, "World!")
@@ -298,6 +297,69 @@ func worldLoader(w http.ResponseWriter, r *http.Request) {
     pageName = "Hours Page"
     //     pageList = pageList
   }
+  
+    // ,  ° . +
+  //  http.HandleFunc("/concepts/index", worldLoader)
+  if pagePath == "/concepts/index" {
+    pageName = "Hours Page"
+    //     pageList = pageList
+  }
+  
+    //  http.HandleFunc("/concepts/Loco-Moco-Bus", worldLoader)
+  if pagePath == "/concepts/Loco-Moco-Bus" {
+    pageName = "Loco-Moco-Bus Page"
+    //     pageList = pageList
+  }
+  
+  //  http.HandleFunc("/concepts/Kitchen-Page", worldLoader)
+  if pagePath == "/concepts/Kitchen-Page" {
+    pageName = "Kitchen-Page Page"
+    //     pageList = pageList
+  }
+  
+ //   http.HandleFunc("/concepts/Honolulu-Lemonade", worldLoader)
+  if pagePath == "/concepts/Honolulu-Lemonade" {
+    pageName = "Honolulu-Lemonade Page"
+    //     pageList = pageList
+  }
+  
+ //   http.HandleFunc("/concepts/Focaccia-Hands", worldLoader)
+      if pagePath == "/concepts/Focaccia-Hands" {
+    pageName = "Focaccia-Hands Page"
+    //     pageList = pageList
+  }
+    
+   // ,  ° . +
+ //   http.HandleFunc("/courses/index", worldLoader)
+  if pagePath == "/courses/index" {
+    pageName = "Hours Page"
+    //     pageList = pageList
+  }
+  
+ //   http.HandleFunc("/courses/CSS-Layout", worldLoader)
+  if pagePath == "/courses/CSS-Layout" {
+    pageName = "CSS-Layout Page"
+    //     pageList = pageList
+  }
+  
+ //   http.HandleFunc("/courses/Culniary-Manager", worldLoader)
+  if pagePath == "/courses/Culniary-Manager" {
+    pageName = "Culniary-Manager Page"
+    //     pageList = pageList
+  }
+  
+ //   http.HandleFunc("/courses/Food-Handler", worldLoader)
+   if pagePath == "/courses/Food-Handler" {
+    pageName = "Food-Handler Page"
+    //     pageList = pageList
+  }
+  
+//   http.HandleFunc("/courses/System-Administrator", worldLoader)
+    if pagePath == "/courses/System-Administrator" {
+    pageName = "System-Administrator Page"
+    //     pageList = pageList
+  }
+  
   
   // ,  ° . +
     data := SOSPageData{
