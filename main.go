@@ -156,9 +156,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 func world(w http.ResponseWriter, r *http.Request) {
    pagePath := r.URL.Path
     
-    fmt.Fprintf(w, `
-    
-    <!doctype html>
+    fmt.Fprintf(w, `<!doctype html>
 <html>
 <head>
 <title>~ %s</title>
@@ -168,14 +166,28 @@ func world(w http.ResponseWriter, r *http.Request) {
     
 body { padding-bottom: 175px; }
     
-    </style>
-    </head>
+</style>
+</head>
     `, pagePath)
+    
+    topBar := `<body>
+    <div class="top_bar">
+      <p><b>#! - Selfie Lunch Concepts</b></p>
+      <hr />
+    </div><!-- - . top_bar - -->`
+    
+    fmt.Fprintf(w, topBar)
     
     fmt.Fprintf(w, "World! %s", pagePath)
     
+    fmt.Fprintf(w, `<footer>
+       <code>- footer</code>
+     </footer>
+</body>
+</html>`)
     
-}
+    
+} // - end world
 
 // ,  ° . +
 func kitchenPage_world(w http.ResponseWriter, r *http.Request) {
