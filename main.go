@@ -155,7 +155,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 // pagePath := 'test'
 
-func getPageInfo() {
+func getPageInfo(x string) {
   data := "hi"
   return data
 
