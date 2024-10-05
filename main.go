@@ -156,8 +156,12 @@ func hello(w http.ResponseWriter, r *http.Request) {
 // pagePath := 'test'
 
 func getPageInfo(x string) string {
-  data := "hi" + x
-  data = "hello" + data
+	data := "hi" + x
+    data = "hello" + data
+	
+	if x == "/concepts/Focaccia-Hands" {
+      data = "Focaccia-Hands Concept Page"
+    } 
   return data
 }
 
@@ -191,7 +195,7 @@ body { padding-bottom: 175px; }
     
     fmt.Fprintf(w, "World! %s", pagePath)
     
-    pageInfo := getPageInfo("hey")
+    pageInfo := getPageInfo(pagePath)
     fmt.Fprintf(w, pageInfo)
     
     fmt.Fprintf(w, `<footer>
