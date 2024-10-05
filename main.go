@@ -163,8 +163,8 @@ func getPageInfo(x string) {
 }
 
 func world(w http.ResponseWriter, r *http.Request) {
-   pagePath = "test"
-   pagePath := r.URL.Path
+   pagePath := "test"
+   pagePath = r.URL.Path
     
     fmt.Fprintf(w, `<!doctype html>
 <html>
