@@ -198,6 +198,25 @@ body { padding-bottom: 175px; }
     pageInfo := getPageInfo(pagePath)
     fmt.Fprintf(w, pageInfo)
     
+    getData-Button := `<div id="demo">
+  <h2>Let AJAX change this text</h2>
+  <button type="button" onclick="loadDoc()">Change Content</button>
+</div>`
+
+    fmt.Fprintf(w, getData-button)
+    
+    getData-Request := `function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+    }
+  xhttp.open("GET", "/hello", true);
+  xhttp.send();
+}`
+
+    fmt.Fprintf(w, "<script>%s</script>", getData-Request)
+    
+    
     fmt.Fprintf(w, `<footer>
        <code>- footer</code>
      </footer>
