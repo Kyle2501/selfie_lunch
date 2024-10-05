@@ -156,8 +156,9 @@ func hello(w http.ResponseWriter, r *http.Request) {
 // pagePath := 'test'
 
 func getPageInfo(x string) {
-  data := "hi"
+  data := "hi" + x
   data = "hello" + data
+  return
 }
 
 func world(w http.ResponseWriter, r *http.Request) {
