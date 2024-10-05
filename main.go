@@ -153,6 +153,12 @@ func hello(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Hello!")
 }
 
+func getPageInfo(pagePath) {
+  data := 'hi'
+  return data
+
+}
+
 func world(w http.ResponseWriter, r *http.Request) {
    pagePath := r.URL.Path
     
@@ -179,6 +185,9 @@ body { padding-bottom: 175px; }
     fmt.Fprintf(w, topBar)
     
     fmt.Fprintf(w, "World! %s", pagePath)
+    
+    pageInfo := getPageInfo(pagePath)
+    fmt.Fprintf(w, pageInfo)
     
     fmt.Fprintf(w, `<footer>
        <code>- footer</code>
