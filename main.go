@@ -157,11 +157,13 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 func getPageInfo(x string) {
   data := "hi"
+  data = "hello"
   return
 
 }
 
 func world(w http.ResponseWriter, r *http.Request) {
+   pagePath = "test"
    pagePath := r.URL.Path
     
     fmt.Fprintf(w, `<!doctype html>
