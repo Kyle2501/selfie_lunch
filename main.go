@@ -45,6 +45,7 @@ type SOSPageData struct {
     PageTitle string
     PagePath string
     PageName string
+    PageLayout string
     SOSNav     []navList
 }
 
@@ -228,74 +229,120 @@ func worldLoader(w http.ResponseWriter, r *http.Request) {
     // fmt.Fprintf(w, "World!")
     pageName := "test"
     
+    pageLayout := `
+        <div>hi test .</div>
+    `
+    
   if pagePath == "/page/Menu" {
     pageName = "Menu Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Location" {
     pageName = "Location Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Equiptment" {
     pageName = "Equiptment Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Staff" {
     pageName = "Staff Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Services" {
     pageName = "Services Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Music" {
     pageName = "Music Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Setting" {
     pageName = "Setting Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Sources" {
     pageName = "Sources Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Marketing" {
     pageName = "Marketing Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Operations" {
     pageName = "Operations Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Software" {
     pageName = "Software Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Events" {
     pageName = "Events Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Seating" {
     pageName = "Seating Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   if pagePath == "/page/Hours" {
     pageName = "Hours Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
     // ,  ° . +
@@ -303,30 +350,45 @@ func worldLoader(w http.ResponseWriter, r *http.Request) {
   if pagePath == "/concepts/index" {
     pageName = "Hours Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
     //  http.HandleFunc("/concepts/Loco-Moco-Bus", worldLoader)
   if pagePath == "/concepts/Loco-Moco-Bus" {
     pageName = "Loco-Moco-Bus Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   //  http.HandleFunc("/concepts/Kitchen-Page", worldLoader)
   if pagePath == "/concepts/Kitchen-Page" {
     pageName = "Kitchen-Page Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
  //   http.HandleFunc("/concepts/Honolulu-Lemonade", worldLoader)
   if pagePath == "/concepts/Honolulu-Lemonade" {
     pageName = "Honolulu-Lemonade Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
  //   http.HandleFunc("/concepts/Focaccia-Hands", worldLoader)
       if pagePath == "/concepts/Focaccia-Hands" {
     pageName = "Focaccia-Hands Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
     
    // ,  ° . +
@@ -334,30 +396,45 @@ func worldLoader(w http.ResponseWriter, r *http.Request) {
   if pagePath == "/courses/index" {
     pageName = "Hours Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
  //   http.HandleFunc("/courses/CSS-Layout", worldLoader)
   if pagePath == "/courses/CSS-Layout" {
     pageName = "CSS-Layout Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
  //   http.HandleFunc("/courses/Culniary-Manager", worldLoader)
   if pagePath == "/courses/Culniary-Manager" {
     pageName = "Culniary-Manager Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
  //   http.HandleFunc("/courses/Food-Handler", worldLoader)
    if pagePath == "/courses/Food-Handler" {
     pageName = "Food-Handler Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
 //   http.HandleFunc("/courses/System-Administrator", worldLoader)
     if pagePath == "/courses/System-Administrator" {
     pageName = "System-Administrator Page"
     //     pageList = pageList
+    pageLayout = `
+        <div>hi test .</div>
+    `
   }
   
   
@@ -366,6 +443,7 @@ func worldLoader(w http.ResponseWriter, r *http.Request) {
             PageTitle: pageName,
             PagePath: pageName,
             PageName: pageName,
+            PageLayout: pageLayout,
             SOSNav: []navList{
                 {Title: "Timer", Done: false},
                 {Title: "Amount Conversion", Done: true},

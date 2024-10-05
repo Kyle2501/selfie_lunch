@@ -33,7 +33,39 @@
 			</ul></p>
 	</div><!-- - . area_wrap - -->
 		
+	<br />
+	<hr />
+	<br />
+		
+	
+<div>
+	<h1>{{.PageTitle}}</h1>
+	<h1>{{.PageName}}</h1>
+	<h1>{{.PagePath}}</h1>
+
+<p><ul class="navList_data">    {{range .SOSNav}}
+<li>+ {{.Title}} &nbsp;{{if .Done}} <button onClick="changePage('{{.Title}}')">Open</button>
+   {{else}}
+    <button onClick="closePage('{{.Title}}')">Close</button>
+     {{end}}
+</li>
+    {{end}}
+</ul></p>	
+		
+<div>
+	{{.PageLayout}}
+	</div>
+		
 </main>
+
+<script>
+
+function changePage(pageName) {
+  window.location.href = "/page/" + pageName;
+};
+
+
+</script>
 <br />
 <hr />
 <br />
