@@ -190,7 +190,7 @@ body { padding-bottom: 175px; }
     
     fmt.Fprintf(w, "World! %s", pagePath)
     
-    pageInfo := getPageInfo()
+    pageInfo := getPageInfo("hey")
     fmt.Fprintf(w, pageInfo)
     
     fmt.Fprintf(w, `<footer>
