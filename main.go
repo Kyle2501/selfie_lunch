@@ -509,6 +509,8 @@ func main() {
   http.HandleFunc("/Seating", worldLoader)
   http.HandleFunc("/Hours", worldLoader)
   
+  http.HandleFunc("/page/Hours", worldLoader)
+  
 
   
   // ,  ° . +
