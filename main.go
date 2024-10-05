@@ -157,7 +157,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 func getPageInfo(x string) {
   data := "hi"
-  data = "hello"
+  data = "hello" + data
   return
 
 }
