@@ -203,7 +203,7 @@ body { padding-bottom: 175px; }
   <button type="button" onclick="loadDoc()">Change Content</button>
 </div>`
 
-    fmt.Fprintf(w, getData_button)
+    fmt.Fprintf(w, getData_Button)
     
     getData_Request := `function loadDoc() {
   const xhttp = new XMLHttpRequest();
