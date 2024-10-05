@@ -155,10 +155,10 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 // pagePath := 'test'
 
-func getPageInfo(x string) {
+func getPageInfo(x string) string {
   data := "hi" + x
   data = "hello" + data
-  return
+  return data
 }
 
 func world(w http.ResponseWriter, r *http.Request) {
