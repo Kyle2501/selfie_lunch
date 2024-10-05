@@ -162,7 +162,7 @@ func getPageInfo(x string) {
 
 func world(w http.ResponseWriter, r *http.Request) {
    pagePath := "test"
-   if r.URL.Path {
+   if r.URL.Path != "/" {
    	pagePath = r.URL.Path
    }
     
