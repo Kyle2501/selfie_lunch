@@ -479,37 +479,37 @@ func main() {
           http.HandleFunc("/", testHandler)
           
   // ,  ° . +
-    http.HandleFunc("/concepts/index", worldLoader)
-    http.HandleFunc("/concepts/Loco-Moco-Bus", worldLoader)
-    http.HandleFunc("/concepts/Kitchen-Page", worldLoader)
-    http.HandleFunc("/concepts/Honolulu-Lemonade", worldLoader)
-    http.HandleFunc("/concepts/Focaccia-Hands", worldLoader)
+    http.HandleFunc("/concepts/index", world)
+    http.HandleFunc("/concepts/Loco-Moco-Bus", world)
+    http.HandleFunc("/concepts/Kitchen-Page", world)
+    http.HandleFunc("/concepts/Honolulu-Lemonade", world)
+    http.HandleFunc("/concepts/Focaccia-Hands", world)
     
     
    // ,  ° . +
-    http.HandleFunc("/courses/index", worldLoader)
-    http.HandleFunc("/courses/CSS-Layout", worldLoader)
-    http.HandleFunc("/courses/Culniary-Manager", worldLoader)
-    http.HandleFunc("/courses/Food-Handler", worldLoader)
-    http.HandleFunc("/courses/System-Administrator", worldLoader)
+    http.HandleFunc("/courses/index", world)
+    http.HandleFunc("/courses/CSS-Layout", world)
+    http.HandleFunc("/courses/Culniary-Manager", world)
+    http.HandleFunc("/courses/Food-Handler", world)
+    http.HandleFunc("/courses/System-Administrator", world)
 
 // ,  ° . +
-  http.HandleFunc("/Menu", worldLoader)
-  http.HandleFunc("/Location", worldLoader)
-  http.HandleFunc("/Equiptment", worldLoader)
-  http.HandleFunc("/Staff", worldLoader)
-  http.HandleFunc("/Services", worldLoader)
-  http.HandleFunc("/Music", worldLoader)
-  http.HandleFunc("/Setting", worldLoader)
-  http.HandleFunc("/Sources", worldLoader)
-  http.HandleFunc("/Marketing", worldLoader)
-  http.HandleFunc("/Operations", worldLoader)
-  http.HandleFunc("/Software", worldLoader)
-  http.HandleFunc("/Events", worldLoader)
-  http.HandleFunc("/Seating", worldLoader)
-  http.HandleFunc("/Hours", worldLoader)
+  http.HandleFunc("/Menu", world)
+  http.HandleFunc("/Location", world)
+  http.HandleFunc("/Equiptment", world)
+  http.HandleFunc("/Staff", world)
+  http.HandleFunc("/Services", world)
+  http.HandleFunc("/Music", world)
+  http.HandleFunc("/Setting", world)
+  http.HandleFunc("/Sources", world)
+  http.HandleFunc("/Marketing", world)
+  http.HandleFunc("/Operations", world)
+  http.HandleFunc("/Software", world)
+  http.HandleFunc("/Events", world)
+  http.HandleFunc("/Seating", world)
+  http.HandleFunc("/Hours", world)
   
-  http.HandleFunc("/page/Hours", worldLoader)
+  http.HandleFunc("/page/Hours", world)
   
 
   
