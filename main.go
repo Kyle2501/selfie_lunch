@@ -154,8 +154,8 @@ func hello(w http.ResponseWriter, r *http.Request) {
 }
 
 func world(w http.ResponseWriter, r *http.Request) {
-//	pagePath := r.URL.Path
-    fmt.Fprintf(w, "World!")
+   pagePath := r.URL.Path
+    fmt.Fprintf(w, "World! %s", pagePath)
 }
 
 // ,  ° . +
