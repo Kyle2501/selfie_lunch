@@ -158,8 +158,6 @@ func hello(w http.ResponseWriter, r *http.Request) {
 func getPageInfo(x string) {
   data := "hi"
   data = "hello" + data
-  return
-
 }
 
 func world(w http.ResponseWriter, r *http.Request) {
