@@ -155,7 +155,26 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 func world(w http.ResponseWriter, r *http.Request) {
    pagePath := r.URL.Path
+    
+    fmt.Fprintf(w, "
+    
+    <!doctype html>
+<html>
+<head>
+<title>~ %s</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+    
+body { padding-bottom: 175px; }
+    
+    </style>
+    </head>
+    ", pagePath)
+    
     fmt.Fprintf(w, "World! %s", pagePath)
+    
+    
 }
 
 // ,  ° . +
