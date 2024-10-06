@@ -163,12 +163,12 @@ pagePath := r.URL.Path
       if data == "Focaccia-Hands" {
     data = `
     <p><ul>
-      <li>_ People &nbsp; <button onclick="getPageinfo('/getData/People')">Open</button></li>
-      <li>_ Product &nbsp; <button onclick="getPageinfo('/getData/Product')">Open</button></li>
-      <li>_ Brand &nbsp; <button onclick="getPageinfo('/getData/Brand')">Open</button></li>
-      <li>_ Booth &nbsp; <button onclick="getPageinfo('/getData/Booth')">Open</button></li>
-      <li>_ Software &nbsp; <button onclick="getPageinfo('/getData/Software')">Open</button></li>
-      <li>_ Sales &nbsp; <button onclick="getPageinfo('/getData/Sales')">Open</button></li>
+      <li>_ People &nbsp; <button onclick="getPageInfo('/getData/People')">Open</button></li>
+      <li>_ Product &nbsp; <button onclick="getPageInfo('/getData/Product')">Open</button></li>
+      <li>_ Brand &nbsp; <button onclick="getPageInfo('/getData/Brand')">Open</button></li>
+      <li>_ Booth &nbsp; <button onclick="getPageInfo('/getData/Booth')">Open</button></li>
+      <li>_ Software &nbsp; <button onclick="getPageInfo('/getData/Software')">Open</button></li>
+      <li>_ Sales &nbsp; <button onclick="getPageInfo('/getData/Sales')">Open</button></li>
     </ul></p>
     `
 }
