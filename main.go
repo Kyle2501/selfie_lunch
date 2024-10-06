@@ -170,6 +170,7 @@ pagePath := r.URL.Path
       <li>_ Software &nbsp; <button onclick="getPageData('/getData/Software')">Open</button></li>
       <li>_ Sales &nbsp; <button onclick="getPageData('/getData/Sales')">Open</button></li>
     </ul></p>
+    `
 }
     fmt.Fprintf(w, "Hello!")
     fmt.Fprintf(w, data)
