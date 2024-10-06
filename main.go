@@ -156,7 +156,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 func getPageData(w http.ResponseWriter, r *http.Request) {
 //	pagePath := r.URL.Path
-pagePath = r.URL.Path
+pagePath := r.URL.Path
     var pathLayers = strings.Split(pagePath, "/")
     data := pathLayers[2]
   if data == "Focaccia-Hands" {
