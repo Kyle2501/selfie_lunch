@@ -293,7 +293,7 @@ body { padding-bottom: 175px; }
   xhttp.onload = function() {
     document.getElementById("demo").innerHTML = this.responseText;
     }
-  xhttp.open("GET", "/x", true);
+  xhttp.open("GET", "/getData/" + x, true);
   xhttp.send();
 }`
 
