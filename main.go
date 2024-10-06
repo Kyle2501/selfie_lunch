@@ -172,6 +172,7 @@ pagePath := r.URL.Path
     `
 }
     fmt.Fprintf(w, "Hello!")
+    fmt.Fprintf(w, data)
 }
 
 // pagePath := 'test'
