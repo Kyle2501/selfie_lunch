@@ -155,6 +155,27 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 // pagePath := 'test'
 
+func getNavList(x string) string {
+  data := x
+  if data == "navList_Courses" {
+    data = `<div><p><ul>
+        <li>_ CSS Layout</li>
+        <li>_ Culniary Manager</li>
+        <li>_ Food Handler</li>
+        <li>_ System Administrator</li>
+    </ul></p></div>`
+  }
+  if data == "navList_Concepts" {
+    data = `<div><p><ul>
+      <li>_ Loco Moco Bus</li>
+      <li>_ Kitchen Page</li>
+      <li>_ Honolulu Lemonade</li>
+      <li>_ Focaccia Hands</li>
+    </ul></p></div>`
+  }
+  return data
+} // - 
+
 func getPageInfo(x string) string {
 	data := "hi" + x
     data = "hello" + data
@@ -207,10 +228,15 @@ body { padding-bottom: 175px; }
 
     fmt.Fprintf(w, getData_Button)
     
+    var sectionBreak = "<br /><hr /><br />"
+    
+    fmt.Fprintf(w, sectionBreak)
+    
+    navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
+    
     navSpace := `
     <button>Page Open</button>
-    `
-    
+    ` + navList
     bottomSheet := fmt.Sprintf("<div class='bottomSheet'> -%s</div>", navSpace)
     
     fmt.Fprintf(w, bottomSheet)
