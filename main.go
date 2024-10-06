@@ -198,12 +198,12 @@ func getNavList(x string) string {
   if data == "Focaccia-Hands" {
     data = `
     <p><ul>
-      <li>_ People</li>
-      <li>_ Product</li>
-      <li>_ Brand</li>
-      <li>_ Booth</li>
-      <li>_ Software</li>
-      <li>_ Sales</li>
+      <li>_ People &nbsp; <button onclick="getPageData('/getData/People')">Open</button></li>
+      <li>_ Product &nbsp; <button onclick="getPageData('/getData/Product')">Open</button></li>
+      <li>_ Brand &nbsp; <button onclick="getPageData('/getData/Brand')">Open</button></li>
+      <li>_ Booth &nbsp; <button onclick="getPageData('/getData/Booth')">Open</button></li>
+      <li>_ Software &nbsp; <button onclick="getPageData('/getData/Software')">Open</button></li>
+      <li>_ Sales &nbsp; <button onclick="getPageData('/getData/Sales')">Open</button></li>
     </ul></p>
     `
   }
@@ -653,6 +653,13 @@ func main() {
     http.HandleFunc("/getData/Culniary-Manager", getPageData)
     http.HandleFunc("/getData/Food-Handler", getPageData)
     http.HandleFunc("/getData/System-Administrator", getPageData)
+    
+    http.HandleFunc("/getData/Product", getPageData)
+    http.HandleFunc("/getData/Brand", getPageData)
+    http.HandleFunc("/getData/Booth", getPageData)
+    http.HandleFunc("/getData/Software", getPageData)
+    http.HandleFunc("/getData/Sales", getPageData)
+   
           
   // ,  ° . +
     http.HandleFunc("/concepts/index", world)
