@@ -205,6 +205,16 @@ body { padding-bottom: 175px; }
 
     fmt.Fprintf(w, getData_Button)
     
+    navSpace := `
+    <button>Page Open</button>
+    `
+    
+    bottomSheet := `<div class="bottomSheet>
+      %s
+    </div>`navSpace
+    
+    fmt.Fprintf(w, bottomSheet)
+    
     getData_Request := `function loadDoc() {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
