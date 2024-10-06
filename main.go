@@ -161,17 +161,17 @@ func getNavList(x string) string {
   if data == "navList_Courses" {
     data = `<div><p><ul>
         <li>_ CSS Layout &nbsp; <button onclick="getPage('/courses/CSS-Layout')">Open</button></li>
-        <li>_ Culniary Manager</li>
-        <li>_ Food Handler</li>
-        <li>_ System Administrator</li>
+        <li>_ Culniary Manager&nbsp; <button onclick="getPage('/courses/Culniary-Manager')">Open</button></li>
+        <li>_ Food Handler&nbsp; <button onclick="getPage('/courses/Food-Handler')">Open</button></li>
+        <li>_ System Administrator&nbsp; <button onclick="getPage('/courses/System-Administrator')">Open</button></li>
     </ul></p></div>`
   }
   if data == "navList_Concepts" {
     data = `<div><p><ul>
-      <li>_ Loco Moco Bus</li>
-      <li>_ Kitchen Page</li>
-      <li>_ Honolulu Lemonade</li>
-      <li>_ Focaccia Hands</li>
+      <li>_ Loco Moco Bus&nbsp; <button onclick="getPage('/concepts/Loco-Moco-Bus')">Open</button></li>
+      <li>_ Kitchen Page&nbsp; <button onclick="getPage('/concepts/Kitchen-Page')">Open</button></li>
+      <li>_ Honolulu Lemonade&nbsp; <button onclick="getPage('/concepts/Honolulu-Lemonade')">Open</button></li>
+      <li>_ Focaccia Hands&nbsp; <button onclick="getPage('/concepts/Focaccia-Hands')">Open</button></li>
     </ul></p></div>`
   }
   return data
