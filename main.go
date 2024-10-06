@@ -263,7 +263,8 @@ body { padding-bottom: 175px; }
     getData_Button := `<div id="demo">
   <h2>Let AJAX change this text</h2>
   <button type="button" onclick="loadDoc()">Change Content</button>
-</div>`
+</div>
+<div id="info"><code>- info</code></div>`
 
     fmt.Fprintf(w, getData_Button)
     fmt.Fprintf(w, sectionBreak)
@@ -303,6 +304,17 @@ body { padding-bottom: 175px; }
 }`
 
     fmt.Fprintf(w, "<script>%s</script>", getPageData_Request)
+    
+    getPageInfo_Request := `function getPageInfo(x) {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("info").innerHTML = this.responseText;
+    }
+  xhttp.open("GET", "/getData/" + x, true);
+  xhttp.send();
+}`
+
+    fmt.Fprintf(w, "<script>%s</script>", getPageInfo_Request)
     
     getData_Request := `function loadDoc() {
   const xhttp = new XMLHttpRequest();
