@@ -154,6 +154,25 @@ func hello(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Hello!")
 }
 
+func getPageData(w http.ResponseWriter, r *http.Request) {
+//	pagePath := r.URL.Path
+pagePath = r.URL.Path
+    var pathLayers = strings.Split(pagePath, "/")
+    data := pathLayers[2]
+  if data == "Focaccia-Hands" {
+    data = `
+    <p><ul>
+      <li>_ People</li>
+      <li>_ Product</li>
+      <li>_ Brand</li>
+      <li>_ Booth</li>
+      <li>_ Software</li>
+      <li>_ Sales</li>
+    </ul></p>
+    `
+    fmt.Fprintf(w, "Hello!")
+}
+
 // pagePath := 'test'
 
 func getNavList(x string) string {
@@ -621,7 +640,7 @@ func main() {
           http.HandleFunc("/", testHandler)
           
    // ,  ° . +
-    http.HandleFunc("/getData/Focaccia-Hands", world)
+    http.HandleFunc("/getData/Focaccia-Hands", getPageData)
           
   // ,  ° . +
     http.HandleFunc("/concepts/index", world)
