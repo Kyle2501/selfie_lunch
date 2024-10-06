@@ -164,11 +164,11 @@ pagePath := r.URL.Path
     data = `
     <p><ul>
       <li>_ People &nbsp; <button onclick="getPageInfo('People')">Open</button></li>
-      <li>_ Product &nbsp; <button onclick="getPageInfo('/getData/Product')">Open</button></li>
-      <li>_ Brand &nbsp; <button onclick="getPageInfo('/getData/Brand')">Open</button></li>
-      <li>_ Booth &nbsp; <button onclick="getPageInfo('/getData/Focaccia-Hands')">Open</button></li>
-      <li>_ Software &nbsp; <button onclick="getPageInfo('/getData/Software')">Open</button></li>
-      <li>_ Sales &nbsp; <button onclick="getPageInfo('/getData/Sales')">Open</button></li>
+      <li>_ Product &nbsp; <button onclick="getPageInfo('Product')">Open</button></li>
+      <li>_ Brand &nbsp; <button onclick="getPageInfo('Brand')">Open</button></li>
+      <li>_ Booth &nbsp; <button onclick="getPageInfo('Focaccia-Hands')">Open</button></li>
+      <li>_ Software &nbsp; <button onclick="getPageInfo('Software')">Open</button></li>
+      <li>_ Sales &nbsp; <button onclick="getPageInfo('Sales')">Open</button></li>
     </ul></p>
     `
 }
