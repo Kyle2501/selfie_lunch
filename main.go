@@ -216,7 +216,7 @@ body { padding-bottom: 175px; }
     </div><!-- - . top_bar - -->`
     
     fmt.Fprintf(w, topBar)
-    var sectionbreak = "<br /><hr /><br />"
+    var sectionBreak = "<br /><hr /><br />"
     
     fmt.Fprintf(w, "World! %s", pagePath)
     
