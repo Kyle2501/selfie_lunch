@@ -646,6 +646,13 @@ func main() {
           
    // ,  ° . +
     http.HandleFunc("/getData/Focaccia-Hands", getPageData)
+    http.HandleFunc("/getData/Loco-Moco-Bus", getPageData)
+    http.HandleFunc("/getData/Kitchen-Page", getPageData)
+    http.HandleFunc("/getData/Honolulu-Lemonade", getPageData)
+    http.HandleFunc("/getData/CSS-Layout", getPageData)
+    http.HandleFunc("/getData/Culniary-Manager", getPageData)
+    http.HandleFunc("/getData/Food-Handler", getPageData)
+    http.HandleFunc("/getData/System-Administrator", getPageData)
           
   // ,  ° . +
     http.HandleFunc("/concepts/index", world)
