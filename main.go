@@ -188,6 +188,18 @@ pagePath := r.URL.Path
   data = "test"
 }
 
+  if data == "Timer" {
+  data = "test1"
+}
+
+  if data == "Ameround-Conversion" {
+  data = "test2"
+}
+
+  if data == "Recipe-Stuff" {
+  data = "test3"
+}
+
     fmt.Fprintf(w, "Hello!")
     fmt.Fprintf(w, data)
 }
