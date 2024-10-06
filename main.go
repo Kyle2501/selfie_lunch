@@ -211,9 +211,9 @@ body { padding-bottom: 175px; }
     
     bottomSheet := `<div class="bottomSheet>
       %s
-    </div>`navSpace
+    </div>`
     
-    fmt.Fprintf(w, bottomSheet)
+    fmt.Fprintf(w, bottomSheet, navSpace)
     
     getData_Request := `function loadDoc() {
   const xhttp = new XMLHttpRequest();
