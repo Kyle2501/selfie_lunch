@@ -166,7 +166,7 @@ pagePath := r.URL.Path
       <li>_ People &nbsp; <button onclick="getPageInfo('/getData/People')">Open</button></li>
       <li>_ Product &nbsp; <button onclick="getPageInfo('/getData/Product')">Open</button></li>
       <li>_ Brand &nbsp; <button onclick="getPageInfo('/getData/Brand')">Open</button></li>
-      <li>_ Booth &nbsp; <button onclick="getPageInfo('/getData/Booth')">Open</button></li>
+      <li>_ Booth &nbsp; <button onclick="getPageInfo('/getData/Focaccia-Hands')">Open</button></li>
       <li>_ Software &nbsp; <button onclick="getPageInfo('/getData/Software')">Open</button></li>
       <li>_ Sales &nbsp; <button onclick="getPageInfo('/getData/Sales')">Open</button></li>
     </ul></p>
@@ -667,7 +667,8 @@ func main() {
     http.HandleFunc("/getData/Food-Handler", getPageData)
     http.HandleFunc("/getData/System-Administrator", getPageData)
     
-    http.HandleFunc("/getData/Product", getPageData)
+   http.HandleFunc("/getData/People", getPageData)
+ http.HandleFunc("/getData/Product", getPageData)
     http.HandleFunc("/getData/Brand", getPageData)
     http.HandleFunc("/getData/Booth", getPageData)
     http.HandleFunc("/getData/Software", getPageData)
