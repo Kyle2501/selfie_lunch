@@ -172,6 +172,18 @@ pagePath := r.URL.Path
     </ul></p>
     `
 }
+   if data == "Kitchen-Page" {
+    data = `</p><ul>
+        <li>_ Cafe Needs &nbsp; <button onclick="getPageInfo('Cafe-Needs')">Open</button></li>
+        <li>_ Timer &nbsp; <button onlick="getPageInfo('Timer')">Open</button></li>
+        <li>_ Amount Conversion &nbsp; <button onlick="getPageInfo('Amount-Conversion')">Open</button></li>
+        <li>_ Recipe Stuff &nbsp; <button onlick="getPageInfo('Recipe-Stuff')">Open</button></li>
+        <li>_ Camera &nbsp; <button onlick="getPageInfo('Camera')">Open</button></li>
+        <li>_ Notes &nbsp; <button onlick="getPageInfo('Notes')">Open</button></li>
+        <li>_ Session Log &nbsp; <button onlick="getPageInfo('Session-Log')">Open</button></li>
+    </ul></p>`
+}
+
     fmt.Fprintf(w, "Hello!")
     fmt.Fprintf(w, data)
 }
