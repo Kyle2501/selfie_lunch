@@ -170,6 +170,7 @@ pagePath = r.URL.Path
       <li>_ Sales</li>
     </ul></p>
     `
+}
     fmt.Fprintf(w, "Hello!")
 }
 
