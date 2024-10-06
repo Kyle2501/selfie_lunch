@@ -260,7 +260,7 @@ body { padding-bottom: 175px; }
     
     navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
     
-    navData := fmt.Sprintf("<button onclick="getPageData('%s')">Page Open</button>", pathLayer[2])
+    navData := fmt.Sprintf("<button onclick='getPageData('%s')'>Page Open</button>", pathLayer[2])
     
     navSpace := navData + navList
     
