@@ -174,6 +174,19 @@ func getNavList(x string) string {
       <li>_ Focaccia Hands&nbsp; <button onclick="getPage('/concepts/Focaccia-Hands')">Open</button></li>
     </ul></p></div>`
   }
+  if data == "Focaccia-Hands" {
+    data := `
+    <p><ul>
+      <li>_ People</li>
+      <li>_ Product</li>
+      <li>_ Brand</li>
+      <li>_ Booth</li>
+      <li>_ Software</li>
+      <li>_ Sales</li>
+    </ul></p>
+    `
+  }
+   
   return data
 } // - 
 
@@ -247,12 +260,24 @@ body { padding-bottom: 175px; }
     
     navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
     
-    navSpace := `
-    <button>Page Open</button>
-    ` + navList
+    navData := fmt.Sprintf("<button onclick="getPageData('%s')">Page Open</button>", pathLayer[2])
+    
+    navSpace := navData + navList
+    
     bottomSheet := fmt.Sprintf("<div class='bottomSheet'> -%s</div>", navSpace)
     
     fmt.Fprintf(w, bottomSheet)
+    
+    getPageData_Request := `function getPageData(x) {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+    }
+  xhttp.open("GET", "/x", true);
+  xhttp.send();
+}`
+
+    fmt.Fprintf(w, "<script>%s</script>", getPageData_Request)
     
     getData_Request := `function loadDoc() {
   const xhttp = new XMLHttpRequest();
@@ -594,6 +619,9 @@ func main() {
     http.HandleFunc("/page/kitchen", kitchenPage_world)
     
           http.HandleFunc("/", testHandler)
+          
+   // ,  ° . +
+    http.HandleFunc("/getData/Focaccia-Hands", world)
           
   // ,  ° . +
     http.HandleFunc("/concepts/index", world)
