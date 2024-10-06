@@ -211,7 +211,7 @@ body { padding-bottom: 175px; }
     <button>Page Open</button>
     `
     
-    bottomSheet := fmt.Sprintf("<div class="bottomSheet> -%s</div>", navSpace)
+    bottomSheet := fmt.Sprintf("<div class='bottomSheet'> -%s</div>", navSpace)
     
     fmt.Fprintf(w, bottomSheet)
     
