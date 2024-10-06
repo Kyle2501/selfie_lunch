@@ -175,7 +175,7 @@ func getNavList(x string) string {
     </ul></p></div>`
   }
   if data == "Focaccia-Hands" {
-    data := `
+    data = `
     <p><ul>
       <li>_ People</li>
       <li>_ Product</li>
@@ -260,7 +260,7 @@ body { padding-bottom: 175px; }
     
     navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
     
-    navData := fmt.Sprintf("<button onclick='getPageData('%s')'>Page Open</button>", pathLayer[2])
+    navData := fmt.Sprintf("<button onclick='getPageData('%s')'>Page Open</button>", pathLayers[2])
     
     navSpace := navData + navList
     
