@@ -160,7 +160,7 @@ func getNavList(x string) string {
   data := x
   if data == "navList_Courses" {
     data = `<div><p><ul>
-        <li>_ CSS Layout &nbsp; <button onclick="getPage('/courses/css-layout')">Open</button></li>
+        <li>_ CSS Layout &nbsp; <button onclick="getPage('/courses/CSS-Layout')">Open</button></li>
         <li>_ Culniary Manager</li>
         <li>_ Food Handler</li>
         <li>_ System Administrator</li>
