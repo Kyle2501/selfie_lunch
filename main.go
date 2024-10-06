@@ -241,7 +241,7 @@ body { padding-bottom: 175px; }
     fmt.Fprintf(w, sectionBreak)
     
     getPage := `function getPage(x) {
-     window.location.href = x' }`
+     window.location.href = x }`
     fmt.Fprintf(w, "<script>%s</script>", getPage)
     
     
