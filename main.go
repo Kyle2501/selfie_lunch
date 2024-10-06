@@ -184,6 +184,10 @@ pagePath := r.URL.Path
     </ul></p>`
 }
 
+  if data == "Cafe-Needs" {
+  data = "test"
+}
+
     fmt.Fprintf(w, "Hello!")
     fmt.Fprintf(w, data)
 }
@@ -685,6 +689,14 @@ func main() {
     http.HandleFunc("/getData/Booth", getPageData)
     http.HandleFunc("/getData/Software", getPageData)
     http.HandleFunc("/getData/Sales", getPageData)
+    
+       http.HandleFunc("/getData/Cafe-Needs", getPageData)
+ http.HandleFunc("/getData/Timer", getPageData)
+    http.HandleFunc("/getData/Amount-Conversion", getPageData)
+    http.HandleFunc("/getData/Recipe-Stuff", getPageData)
+    http.HandleFunc("/getData/Camera", getPageData)
+    http.HandleFunc("/getData/Notes", getPageData)
+    http.HandleFunc("/getData/Session-Log", getPageData)
    
           
   // ,  ° . +
