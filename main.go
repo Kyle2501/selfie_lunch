@@ -180,6 +180,8 @@ func world(w http.ResponseWriter, r *http.Request) {
 <style>
     
 body { padding-bottom: 175px; }
+
+.bottomSheet { outline: 1px solid #aaa; width: 95%; margin: 0 auto; }
     
 </style>
 </head>
@@ -209,11 +211,9 @@ body { padding-bottom: 175px; }
     <button>Page Open</button>
     `
     
-    bottomSheet := `<div class="bottomSheet>
-      %s
-    </div>`
+    bottomSheet := fmt.Sprintf("<div class="bottomSheet> -%s</div>", navSpace)
     
-    fmt.Fprintf(w, bottomSheet, navSpace)
+    fmt.Fprintf(w, bottomSheet)
     
     getData_Request := `function loadDoc() {
   const xhttp = new XMLHttpRequest();
