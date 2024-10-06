@@ -7,6 +7,7 @@ import (
     "log"
     
     "fmt"
+    "strings"
 		
 	"text/template"
 	"net/http"
@@ -215,11 +216,14 @@ body { padding-bottom: 175px; }
     </div><!-- - . top_bar - -->`
     
     fmt.Fprintf(w, topBar)
+    var sectionbreak = "<br /><hr /><br />"
     
     fmt.Fprintf(w, "World! %s", pagePath)
     
     pageInfo := getPageInfo(pagePath)
     fmt.Fprintf(w, pageInfo)
+    
+    fmt.Fprintf(w, sectionBreak)
     
     getData_Button := `<div id="demo">
   <h2>Let AJAX change this text</h2>
@@ -227,9 +231,11 @@ body { padding-bottom: 175px; }
 </div>`
 
     fmt.Fprintf(w, getData_Button)
+    fmt.Fprintf(w, sectionBreak)
     
-    var sectionBreak = "<br /><hr /><br />"
-    
+    var pathLayers = strings.Split(pagePath, "/")
+    fmt.Fprintf(w, pathLayers[1])
+   
     fmt.Fprintf(w, sectionBreak)
     
     navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
@@ -252,7 +258,7 @@ body { padding-bottom: 175px; }
 
     fmt.Fprintf(w, "<script>%s</script>", getData_Request)
     
-    
+    fmt.Fprintf(w, sectionBreak)
     fmt.Fprintf(w, `<footer>
        <code>- footer</code>
      </footer>
