@@ -277,10 +277,13 @@ body { padding-bottom: 175px; }
      window.location.href = x }`
     fmt.Fprintf(w, "<script>%s</script>", getPage)
     
+    pageID :=  fmt.Sprintf("var pageID = '%s'", pathLayers[2])
+    fmt.Fprintf(w, "<script>%s</script>", pageID)
+    
     
     navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
     
-    navData := fmt.Sprintf("<button onclick='getPageData('%s')'>Page Open</button>", pathLayers[2])
+    navData := "<button onclick='getPageData(pageID)'>Page Open</button>"
     
     navSpace := navData + navList
     
