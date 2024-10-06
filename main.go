@@ -160,7 +160,7 @@ func getNavList(x string) string {
   data := x
   if data == "navList_Courses" {
     data = `<div><p><ul>
-        <li>_ CSS Layout</li>
+        <li>_ CSS Layout &nbsp; <button onclick="getPage('/courses/css-layout')">Open</button></li>
         <li>_ Culniary Manager</li>
         <li>_ Food Handler</li>
         <li>_ System Administrator</li>
@@ -239,6 +239,11 @@ body { padding-bottom: 175px; }
     fmt.Fprintf(w, pathLayers[2])
    
     fmt.Fprintf(w, sectionBreak)
+    
+    getPage := `function getPage(x) {
+     window.location.href = x' }`
+    fmt.Fprintf(w, "<script>%s</script>", getPage)
+    
     
     navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
     
