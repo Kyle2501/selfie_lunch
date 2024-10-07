@@ -189,7 +189,7 @@ pagePath := r.URL.Path
 }
 
   if data == "Timer" {
-  data = time.Now()
+  data = time.Now().UTC().MarshalText()
 }
 
   if data == "Amount-Conversion" {
