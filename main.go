@@ -189,7 +189,7 @@ pagePath := r.URL.Path
 }
 
   if data == "Timer" {
-  date = time.Now() //.UTC().MarshalText()
+  date := time.Now() //.UTC().MarshalText()
   data = date.Format(time.RFC3339)
 }
 
