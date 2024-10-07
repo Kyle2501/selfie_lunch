@@ -12,7 +12,7 @@ import (
 	"text/template"
 	"net/http"
 	
-//	"time"
+    "time"
 
 )
 
@@ -189,10 +189,10 @@ pagePath := r.URL.Path
 }
 
   if data == "Timer" {
-  data = "test1"
+  data = time.Now()
 }
 
-  if data == "Ameround-Conversion" {
+  if data == "Amount-Conversion" {
   data = "test2"
 }
 
