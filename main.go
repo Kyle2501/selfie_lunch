@@ -228,6 +228,14 @@ pagePath := r.URL.Path
     data = "Session Log Page"
 }
 
+if data == "CSS-Layout" {
+  data = `
+    <div>
+    <p>Design Principles &nbsp; <button onclick="getPageInfo('Design-Principles')">Open</button></p>
+    </div>
+  `
+}
+
 if data == "Design-Principles" {
   data = `<div><p><b>Design Principles Page</b><ul>
     <li>_ Contrast onclick="getPageInfo('Contrast')"</li>
@@ -789,6 +797,8 @@ func main() {
     http.HandleFunc("/getData/Camera", getPageData)
     http.HandleFunc("/getData/Notes", getPageData)
     http.HandleFunc("/getData/Session-Log", getPageData)
+   
+   http.HandleFunc("/getData/Design-Principles", getPageData)
    
    // ,  ° . +
        http.HandleFunc("/getData/Contrast", getPageData)
