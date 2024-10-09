@@ -256,6 +256,30 @@ if data == "Design-Principles" {
   </ul></p></div>`
 }
 
+
+    if data == "Contrast" {}
+    if data == "Movement" {}
+    if data == "Repetition" {}
+    if data == "Empasis" {}
+    if data == "Balance" {}
+    if data == "Hierarchy" {}
+    if data == "Proportion" {}
+    if data == "Unity" {}
+    if data == "White Space" {}
+    if data == "Rhythm" {}
+    if data == "Variety" {}
+    if data == Color" {}
+    if data == "Pattern" {}
+     if data == "Scale" {}
+    if data == "Visual Hierarchy" {}
+    if data == "Aethetics" {}
+    if data == "Context" {}
+    if data == "Gestalt Principles" {}
+    if data == "Space" {}
+    if data == "Symmetry" {}
+    if data == "Alignment" {}
+    if data == "Prevent-Errors-if-Possible" {}
+
     fmt.Fprintf(w, "Hello!")
     fmt.Fprintf(w, data)
 }
