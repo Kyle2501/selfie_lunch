@@ -268,7 +268,7 @@ if data == "Design-Principles" {
     if data == "White Space" { data = "White Space Page" }
     if data == "Rhythm" { data = "Rhythm Page" }
     if data == "Variety" { data = "Variety Page" }
-    if data == Color" { data = "Color Page" }
+    if data == "Color" { data = "Color Page" }
     if data == "Pattern" { data = "Pattern Page" }
      if data == "Scale" { data = "Scale Page" }
     if data == "Visual Hierarchy" { data = "Visual Hierarchy Page" }
