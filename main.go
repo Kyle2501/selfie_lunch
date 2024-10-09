@@ -238,28 +238,28 @@ if data == "CSS-Layout" {
 
 if data == "Design-Principles" {
   data = `<div><p><b>Design Principles Page</b><ul>
-    <li>_ Contrast onclick="getPageInfo('Contrast')"</li>
-    <li>_ Movement onclick="getPageInfo('Repetition')"</li>
-    <li>_ Repetition onclick="getPageInfo('People')"</li>
-    <li>_ Empasis onclick="getPageInfo('Empasis')"</li>
-    <li>_ Balance onclick="getPageInfo('Balance')"</li>
-    <li>_ Hierarchy onclick="getPageInfo('Hierarchy')"</li>
-    <li>_ Proportion onclick="getPageInfo('Proportion')"</li>
-    <li>_ Unity onclick="getPageInfo('Unity')"</li>
-    <li>_ White Space onclick="getPageInfo('White-Space')"</li>
-    <li>_ Rhythm onclick="getPageInfo('Rhythm')"</li>
-    <li>_ Variety onclick="getPageInfo('Variety')"</li>
-    <li>_ Color onclick="getPageInfo('Color')"</li>
-    <li>_ Pattern onclick="getPageInfo('Pattern')"</li>
-    <li>_ Scale onclick="getPageInfo('Scale')"</li>
-    <li>_ Visual Hierarchy onclick="getPageInfo('Visual-Hierarchy')"</li>
-    <li>_ Aethetics onclick="getPageInfo('Aethetics')"</li>
-    <li>_ Context onclick="getPageInfo('Context')"</li>
-    <li>_ Gestalt Principles onclick="getPageInfo('Gestalt')"</li>
-    <li>_ Space onclick="getPageInfo('Space')"</li>
-    <li>_ Symmetry onclick="getPageInfo('Symmetry')"</li>
-    <li>_ Alignment onclick="getPageInfo('Alignment')"</li>
-    <li>_ Prevent Errors if Possible onclick="getPageInfo('Prevent-Errors-if-Possible')"</li>
+    <li>_ Contrast  &nbsp; <button onclick="getPageInfo('Contrast')">Open</button></li>
+    <li>_ Movement  &nbsp; <button onclick="getPageInfo('Repetition')">Open</button></li>
+    <li>_ Repetition  &nbsp; <button onclick="getPageInfo('People')">Open</button></li>
+    <li>_ Empasis  &nbsp; <button onclick="getPageInfo('Empasis')">Open</button></li>
+    <li>_ Balance  &nbsp; <button onclick="getPageInfo('Balance')">Open</button></li>
+    <li>_ Hierarchy  &nbsp; <button onclick="getPageInfo('Hierarchy')">Open</button></li>
+    <li>_ Proportion  &nbsp; <button onclick="getPageInfo('Proportion')">Open</button></li>
+    <li>_ Unity  &nbsp; <button onclick="getPageInfo('Unity')">Open</button></li>
+    <li>_ White Space  &nbsp; <button onclick="getPageInfo('White-Space')">Open</button></li>
+    <li>_ Rhythm  &nbsp; <button onclick="getPageInfo('Rhythm')">Open</button></li>
+    <li>_ Variety &nbsp; <button  onclick="getPageInfo('Variety')">Open</button></li>
+    <li>_ Color  &nbsp; <button onclick="getPageInfo('Color')">Open</button></li>
+    <li>_ Pattern &nbsp; <button  onclick="getPageInfo('Pattern')">Open</button></li>
+    <li>_ Scale  &nbsp; <button onclick="getPageInfo('Scale')">Open</button></li>
+    <li>_ Visual Hierarchy  &nbsp; <button onclick="getPageInfo('Visual-Hierarchy')">Open</button></li>
+    <li>_ Aethetics  &nbsp; <button onclick="getPageInfo('Aethetics')">Open</button></li>
+    <li>_ Context &nbsp; <button  onclick="getPageInfo('Context')">Open</button></li>
+    <li>_ Gestalt Principles  &nbsp; <button onclick="getPageInfo('Gestalt')">Open</button></li>
+    <li>_ Space  &nbsp; <button onclick="getPageInfo('Space')">Open</button></li>
+    <li>_ Symmetry &nbsp; <button  onclick="getPageInfo('Symmetry')">Open</button></li>
+    <li>_ Alignment &nbsp; <button  onclick="getPageInfo('Alignment')">Open</button></li>
+    <li>_ Prevent Errors if Possible  &nbsp; <button onclick="getPageInfo('Prevent-Errors-if-Possible')">Open</button></li>
   
   </ul></p></div>`
 }
