@@ -185,7 +185,22 @@ pagePath := r.URL.Path
 }
 
   if data == "Cafe-Needs" {
-  data = "test"
+  data = `<div><p><b>Cafe Needs Page</b><ul>
+     <li>_ Menu &nbsp; <button onclick="getPageInfo('Menu')">Open</button></li>
+     <li>_ Location &nbsp; <button onclick="getPageInfo('Location')">Open</button></li>
+      <li>_ Equiptment &nbsp; <button onclick="getPageInfo('Equiptment')">Open</button></li>
+      <li>_ Staff &nbsp; <button onclick="getPageInfo('Staff')">Open</button></li>
+      <li>_ Services &nbsp; <button onclick="getPageInfo('Services')">Open</button></li>
+     <li>_ Music &nbsp; <button onclick="getPageInfo('Music')">Open</button></li>
+     <li>_ Setting &nbsp; <button onclick="getPageInfo('Setting')">Open</button></li>
+       <li>_ Sources &nbsp; <button onclick="getPageInfo('Sources')">Open</button></li>
+      <li>_ Marketing &nbsp; <button onclick="getPageInfo('Marketing')">Open</button></li>
+      <li>_ Operations &nbsp; <button onclick="getPageInfo('Operations')">Open</button></li>
+     <li>_ Software &nbsp; <button onclick="getPageInfo('Software')">Open</button></li>
+      <li>_ Events &nbsp; <button onclick="getPageInfo('Events')">Open</button></li>
+       <li>_ Seating &nbsp; <button onclick="getPageInfo('Seating')">Open</button></li>
+     <li>_ Hours &nbsp; <button onclick="getPageInfo('Hours')">Open</button></li>
+  `
 }
 
   if data == "Timer" {
@@ -194,11 +209,23 @@ pagePath := r.URL.Path
 }
 
   if data == "Amount-Conversion" {
-  data = "test2"
+  data = " Amount Conversion Page"
 }
 
   if data == "Recipe-Stuff" {
-  data = "test3"
+  data = "Recipe Stuff Page"
+}
+
+  if data == "Camera" {
+  data = "Camera Page"
+}
+
+  if data == "Notes" {
+  data = "Notes Page"
+}
+
+  if data == "Session-Log" {
+    data = "Session Log Page"
 }
 
     fmt.Fprintf(w, "Hello!")
