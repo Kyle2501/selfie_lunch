@@ -230,55 +230,55 @@ pagePath := r.URL.Path
 
 if data == "Design-Principles" {
   data = `<div><p><b>Design Principles Page</b><ul>
-    <li>_ Contrast</li>
-    <li>_ Movement</li>
-    <li>_ Repetition</li>
-    <li>_ Empasis</li>
-    <li>_ Balance</li>
-    <li>_ Hierarchy</li>
-    <li>_ Proportion</li>
-    <li>_ Unity</li>
-    <li>_ White Space</li>
-    <li>_ Rhythm</li>
-    <li>_ Variety</li>
-    <li>_ Color</li>
-    <li>_ Pattern</li>
-    <li>_ Scale</li>
-    <li>_ Visual Hierarchy</li>
-    <li>_ Aethetics</li>
-    <li>_ Context</li>
-    <li>_ Gestalt Principles</li>
-    <li>_ Space</li>
-    <li>_ Symmetry</li>
-    <li>_ Alignment</li>
-    <li>_ Prevent Errors if Possible</li>
+    <li>_ Contrast onclick="getPageInfo('Contrast')"</li>
+    <li>_ Movement onclick="getPageInfo('Repetition')"</li>
+    <li>_ Repetition onclick="getPageInfo('People')"</li>
+    <li>_ Empasis onclick="getPageInfo('Empasis')"</li>
+    <li>_ Balance onclick="getPageInfo('Balance')"</li>
+    <li>_ Hierarchy onclick="getPageInfo('Hierarchy')"</li>
+    <li>_ Proportion onclick="getPageInfo('Proportion')"</li>
+    <li>_ Unity onclick="getPageInfo('Unity')"</li>
+    <li>_ White Space onclick="getPageInfo('White-Space')"</li>
+    <li>_ Rhythm onclick="getPageInfo('Rhythm')"</li>
+    <li>_ Variety onclick="getPageInfo('Variety')"</li>
+    <li>_ Color onclick="getPageInfo('Color')"</li>
+    <li>_ Pattern onclick="getPageInfo('Pattern')"</li>
+    <li>_ Scale onclick="getPageInfo('Scale')"</li>
+    <li>_ Visual Hierarchy onclick="getPageInfo('Visual-Hierarchy')"</li>
+    <li>_ Aethetics onclick="getPageInfo('Aethetics')"</li>
+    <li>_ Context onclick="getPageInfo('Context')"</li>
+    <li>_ Gestalt Principles onclick="getPageInfo('Gestalt')"</li>
+    <li>_ Space onclick="getPageInfo('Space')"</li>
+    <li>_ Symmetry onclick="getPageInfo('Symmetry')"</li>
+    <li>_ Alignment onclick="getPageInfo('Alignment')"</li>
+    <li>_ Prevent Errors if Possible onclick="getPageInfo('Prevent-Errors-if-Possible')"</li>
   
   </ul></p></div>`
 }
 
 
-    if data == "Contrast" {}
-    if data == "Movement" {}
-    if data == "Repetition" {}
-    if data == "Empasis" {}
-    if data == "Balance" {}
-    if data == "Hierarchy" {}
-    if data == "Proportion" {}
-    if data == "Unity" {}
-    if data == "White Space" {}
-    if data == "Rhythm" {}
-    if data == "Variety" {}
-    if data == Color" {}
-    if data == "Pattern" {}
-     if data == "Scale" {}
-    if data == "Visual Hierarchy" {}
-    if data == "Aethetics" {}
-    if data == "Context" {}
-    if data == "Gestalt Principles" {}
-    if data == "Space" {}
-    if data == "Symmetry" {}
-    if data == "Alignment" {}
-    if data == "Prevent-Errors-if-Possible" {}
+    if data == "Contrast" { data = "Contrast Page" }
+    if data == "Movement" { data = "Movement Page" }
+    if data == "Repetition" { data = "Repetition Page" }
+    if data == "Empasis" { data = "Empasis Page" }
+    if data == "Balance" { data = "Balance Page" }
+    if data == "Hierarchy" { data = "Hierarchy Page" }
+    if data == "Proportion" { data = "Proportion Page" }
+    if data == "Unity" { data = "Unity Page" }
+    if data == "White Space" { data = "White Space Page" }
+    if data == "Rhythm" { data = "Rhythm Page" }
+    if data == "Variety" { data = "Variety Page" }
+    if data == Color" { data = "Color Page" }
+    if data == "Pattern" { data = "Pattern Page" }
+     if data == "Scale" { data = "Scale Page" }
+    if data == "Visual Hierarchy" { data = "Visual Hierarchy Page" }
+    if data == "Aethetics" { data = "Aethetics Page" }
+    if data == "Context" { data = "Context Page" }
+    if data == "Gestalt Principles" { data = "Gestalt Page" }
+    if data == "Space" { data = "Space Page" }
+    if data == "Symmetry" { data = "Symmetry Page" }
+    if data == "Alignment" { data = "Alignment Page" }
+    if data == "Prevent-Errors-if-Possible" { data = "Pervent Errors if Possible Page" }
 
     fmt.Fprintf(w, "Hello!")
     fmt.Fprintf(w, data)
