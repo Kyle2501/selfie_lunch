@@ -228,6 +228,34 @@ pagePath := r.URL.Path
     data = "Session Log Page"
 }
 
+if data == "Design-Principles" {
+  data = `<div><p><b>Design Principles Page</b><ul>
+    <li>_ Contrast</li>
+    <li>_ Movement</li>
+    <li>_ Repetition</li>
+    <li>_ Empasis</li>
+    <li>_ Balance</li>
+    <li>_ Hierarchy</li>
+    <li>_ Proportion</li>
+    <li>_ Unity</li>
+    <li>_ White Space</li>
+    <li>_ Rhythm</li>
+    <li>_ Variety</li>
+    <li>_ Color</li>
+    <li>_ Pattern</li>
+    <li>_ Scale</li>
+    <li>_ Visual Hierarchy</li>
+    <li>_ Aethetics</li>
+    <li>_ Context</li>
+    <li>_ Gestalt Principles</li>
+    <li>_ Space</li>
+    <li>_ Symmetry</li>
+    <li>_ Alignment</li>
+    <li>_ Prevent Errors if Possible</li>
+  
+  </ul></p></div>`
+}
+
     fmt.Fprintf(w, "Hello!")
     fmt.Fprintf(w, data)
 }
