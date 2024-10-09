@@ -793,7 +793,7 @@ func main() {
    // ,  ° . +
        http.HandleFunc("/getData/Contrast", getPageData)
     http.HandleFunc("/getData/Movement", getPageData)
-    http.HandleFunc("/getData/ Repetition", getPageData)
+    http.HandleFunc("/getData/Repetition", getPageData)
     http.HandleFunc("/getData/Empasis", getPageData)
     http.HandleFunc("/getData/Balance", getPageData)
     http.HandleFunc("/getData/Hierarchy", getPageData)
