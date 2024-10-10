@@ -242,11 +242,33 @@ if data == "CSS-Layout" {
 }
 
   if data == "Intro-and-Welcome" {
-  data = "Intro and Welcome Page"
+  data = `<p><b>Intro and Welcome Page</b></p>
+  <p>--</p>
+  <div>
+    <p><b>_ Weekly Schedule</b><ul>
+      <li>_ Day 01 &nbsp; // on Mon ~</li>
+      <li>_ Day 02 &nbsp; // on Wed ~</li>
+      <li>_ Day 03 &nbsp; // on Fri ~</li>
+    </ul></p>
+    <p><b>_ Extra Help Days</b><ul>
+      <li>_ Day 01 &nbsp; // on Tues ~</li>
+      <li>_ Day 02 &nbsp; // on Thurs ~</li>
+    </ul></p>
+    <p><b>_ Weekend Classes</b><ul>
+      <li>_ Day 01 &nbsp; // on Sat ~</li>
+      <li>_ Day 02 &nbsp; // on Sun ~</li>
+    </ul</p>
+    <p><b>_ Meeting Times</b><ul>
+      <li>_ Early Class &nbsp; // at 10:am ~</li>
+      <li>_ Later Class &nbsp; // at 2:pm ~</li>
+      <li>_ Evening Class &nbsp; // at 7:pm ~</li>
+    </ul></p>
+  </div>
+  `
 }
 
   if data == "Setup-Environment" {
-  data =  `<p>Setup Environment Page</p>
+  data =  `<p><b>Setup Environment Page</b></p>
     <p><ul>
       <li>_ Hardware Setup  &nbsp; <button onclick="getPageInfo('Hardware-Setup')">Open</button></li>
       <li>_ Software Setup  &nbsp; <button onclick="getPageInfo('Software-Setup')">Open</button></li>
@@ -267,11 +289,37 @@ if data == "CSS-Layout" {
 
 
   if data == "Text-and-Color" {
-  data = "Text and Color Page"
+  data = `<b>Text and Color Page</b>
+  <p>_ Vocab<ul>
+    <li>_ text-align</li>
+    <li>_ font-size</li>
+    <li>_ font-family</li>
+    <li>_ font-wight</li>
+    <li>_ color</li>
+  
+  </ul></p>
+  
+  `
 }
 
   if data == "Box-Model-Concept" {
-  data = "Box Model Concept Page"
+  data = `<p><b>Box Model Concept Page</b></p>
+  <p>_ Vocab<ul>
+    <li>_ Padding</li>
+    <li>_ Margin</li>
+    <li>_ Border</li>
+    <li>_ Outline</li>
+    <li>_ Width</li>
+    <li>_ Height</li>
+    <li>_ Left</li>
+    <li>_ Top</li>
+    <li>_ Right</li>
+    <li>_ Bottom</li>
+    <li>_ Background-Color</li>
+    <li>_ Position</li>
+    <li>_ z-index</li>
+  </ul></p>
+  `
 }
 
   if data == "Element-Class-Names" {
