@@ -231,9 +231,34 @@ pagePath := r.URL.Path
 if data == "CSS-Layout" {
   data = `
     <div>
+    <p>Intro and Welcome &nbsp; <button onclick="getPageInfo('Intro-and-Welcome')">Open</button></p>
+    <p>Setup Environment &nbsp; <button onclick="getPageInfo('Setup-Environment')">Open</button></p>
+    <p>Text and Color &nbsp; <button onclick="getPageInfo('Text-and-Color')">Open</button></p>
+    <p>Box Model Concept &nbsp; <button onclick="getPageInfo('Box-Model-Concepts')">Open</button></p>
+    <p>Element Class Names &nbsp; <button onclick="getPageInfo('Element-Class-Names')">Open</button></p>
     <p>Design Principles &nbsp; <button onclick="getPageInfo('Design-Principles')">Open</button></p>
     </div>
   `
+}
+
+  if data == "Intro-and-Welcome" {
+  data = "Intro and Welcome Page"
+}
+
+  if data == "Setup-Environment" {
+  data =  "Setup Environment Page"
+}
+
+  if data == "Text-and-Color" {
+  data = "Text and Color Page"
+}
+
+  if data == "Box-Model-Concept" {
+  data = "Box Model Concept Page"
+}
+
+  if data == "Element-Class-Names" {
+  data = "Element Class Names Page"
 }
 
 if data == "Design-Principles" {
@@ -798,6 +823,11 @@ func main() {
     http.HandleFunc("/getData/Notes", getPageData)
     http.HandleFunc("/getData/Session-Log", getPageData)
    
+   http.HandleFunc("/getData/Intro-and-Welcome", getPageData)
+   http.HandleFunc("/getData/Setup-Environment", getPageData)
+   http.HandleFunc("/getData/Text-and-Color", getPageData)
+   http.HandleFunc("/getData/Box-Model-Concept", getPageData)
+   http.HandleFunc("/getData/Element-Class-Names", getPageData)
    http.HandleFunc("/getData/Design-Principles", getPageData)
    
    // ,  ° . +
