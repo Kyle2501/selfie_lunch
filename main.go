@@ -246,8 +246,25 @@ if data == "CSS-Layout" {
 }
 
   if data == "Setup-Environment" {
-  data =  "Setup Environment Page"
+  data =  `<p>Setup Environment Page</p>
+    <p><ul>
+      <li>_ Hardware Setup  &nbsp; <button onclick="getPageInfo('Hardware-Setup')">Open</button></li>
+      <li>_ Software Setup  &nbsp; <button onclick="getPageInfo('Software-Setup')">Open</button></li>
+      <li>_ Online Accounts Setup  &nbsp; <button onclick="getPageInfo('Online-Accounts')">Open</button></li>
+  </ul</p>
+  `
 }
+
+  if data == "Hardware-Setup" {
+  data = "Hardware Setup Page"
+}
+  if data == "Software-Setup" {
+  data = "Software Setup Page"
+}
+  if data == "Online-Accounts" {
+  data = "Online Accounts Setup Page"
+}
+
 
   if data == "Text-and-Color" {
   data = "Text and Color Page"
@@ -298,16 +315,16 @@ if data == "Design-Principles" {
     if data == "Hierarchy" { data = "Hierarchy Page" }
     if data == "Proportion" { data = "Proportion Page" }
     if data == "Unity" { data = "Unity Page" }
-    if data == "White Space" { data = "White Space Page" }
+    if data == "White-Space" { data = "White Space Page" }
     if data == "Rhythm" { data = "Rhythm Page" }
     if data == "Variety" { data = "Variety Page" }
     if data == "Color" { data = "Color Page" }
     if data == "Pattern" { data = "Pattern Page" }
      if data == "Scale" { data = "Scale Page" }
-    if data == "Visual Hierarchy" { data = "Visual Hierarchy Page" }
+    if data == "Visual-Hierarchy" { data = "Visual Hierarchy Page" }
     if data == "Aethetics" { data = "Aethetics Page" }
     if data == "Context" { data = "Context Page" }
-    if data == "Gestalt Principles" { data = "Gestalt Page" }
+    if data == "Gestalt-Principles" { data = "Gestalt Page" }
     if data == "Space" { data = "Space Page" }
     if data == "Symmetry" { data = "Symmetry Page" }
     if data == "Alignment" { data = "Alignment Page" }
@@ -829,6 +846,10 @@ func main() {
    http.HandleFunc("/getData/Box-Model-Concept", getPageData)
    http.HandleFunc("/getData/Element-Class-Names", getPageData)
    http.HandleFunc("/getData/Design-Principles", getPageData)
+   
+   http.HandleFunc("/getData/Hardware-Setup", getPageData)
+   http.HandleFunc("/getData/Software-Setup", getPageData)
+   http.HandleFunc("/getData/Online-Accounts", getPageData)
    
    // ,  ° . +
        http.HandleFunc("/getData/Contrast", getPageData)
