@@ -234,7 +234,7 @@ if data == "CSS-Layout" {
     <p>Intro and Welcome &nbsp; <button onclick="getPageInfo('Intro-and-Welcome')">Open</button></p>
     <p>Setup Environment &nbsp; <button onclick="getPageInfo('Setup-Environment')">Open</button></p>
     <p>Text and Color &nbsp; <button onclick="getPageInfo('Text-and-Color')">Open</button></p>
-    <p>Box Model Concept &nbsp; <button onclick="getPageInfo('Box-Model-Concepts')">Open</button></p>
+    <p>Box Model Concept &nbsp; <button onclick="getPageInfo('Box-Model-Concept')">Open</button></p>
     <p>Element Class Names &nbsp; <button onclick="getPageInfo('Element-Class-Names')">Open</button></p>
     <p>Design Principles &nbsp; <button onclick="getPageInfo('Design-Principles')">Open</button></p>
     </div>
@@ -257,7 +257,7 @@ if data == "CSS-Layout" {
     <p><b>_ Weekend Classes</b><ul>
       <li>_ Day 01 &nbsp; // on Sat ~</li>
       <li>_ Day 02 &nbsp; // on Sun ~</li>
-    </ul</p>
+    </ul></p>
     <p><b>_ Meeting Times</b><ul>
       <li>_ Early Class &nbsp; // at 10:am ~</li>
       <li>_ Later Class &nbsp; // at 2:pm ~</li>
