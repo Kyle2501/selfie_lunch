@@ -222,43 +222,43 @@ pagePath := r.URL.Path
   currentTime := time.Now()
   currentTime_Year := currentTime.Year()
   
-  currentTime_Month := currentTime.Month()
-   currentTime_Month = currentTime_Month.String()
+  currentTime_Month_ := currentTime.Month()
+   currentTime_Month = currentTime_Month_.String()
    
-  currentTime_Day := currentTime.Day()
-  currentTime_Day = fmt.Sprint(currentTime_Day)
+  currentTime_Day_ := currentTime.Day()
+  currentTime_Day = fmt.Sprint(currentTime_Day_)
   
-  currentTime_Hour := currentTime.Hour()
-  currentTime_Hour = fmt.Sprint(currentTime_Hour)
+  currentTime_Hour_ := currentTime.Hour()
+  currentTime_Hour = fmt.Sprint(currentTime_Hour_)
   
-  currentTime_Minute := currentTime.Minute()
-  currentTime_Minute = fmt.Sprint(currentTime_Minute)
+  currentTime_Minute_ := currentTime.Minute()
+  currentTime_Minute = fmt.Sprint(currentTime_Minute_)
   
-  currentTime_Second :=currentTime.Second()
-  currentTime_Second = fmt.Sprint(currentTime_Second)
+  currentTime_Second_ :=currentTime.Second()
+  currentTime_Second = fmt.Sprint(currentTime_Second_)
   
-  currentTime_Nanosecond := currentTime.Nanosecond()
-  currentTime_Nanosecond = fmt.Sprint(currentTime_Nanosecond)
+  currentTime_Nanosecond_ := currentTime.Nanosecond()
+  currentTime_Nanosecond = fmt.Sprint(currentTime_Nanosecond_)
   
-  currentTime_Location := currentTime.Location()
-  currentTime_Location = fmt.Sprint(currentTime_Location)
+  currentTime_Location_ := currentTime.Location()
+  currentTime_Location = fmt.Sprint(currentTime_Location_)
   
-  currentTime_Local := currentTime.Local()
-  currentTime_Local = fmt.Sprint(currentTime_Local)
+  currentTime_Local_ := currentTime.Local()
+  currentTime_Local = fmt.Sprint(currentTime_Local_)
 // - . +  
   compTime := currentTime.Add(30 * time.Minute)
-  compTime_Before := compTime.Before(currentTime)
-  compTime_Before = fmt.Sprint(compTime_Before)
+  compTime_Before_ := compTime.Before(currentTime)
+  compTime_Before = fmt.Sprint(compTime_Before_)
   
-  compTime_After := compTime.After(currentTime)
-  compTime_After = fmt.Sprint(compTime_After)
+  compTime_After_ := compTime.After(currentTime)
+  compTime_After = fmt.Sprint(compTime_After_)
   
-  compTime_Equal := compTime.Equal(currentTime)
-  compTime_Equal = fmt.Sprint(compTime_Equal)
+  compTime_Equal_ := compTime.Equal(currentTime)
+  compTime_Equal = fmt.Sprint(compTime_Equal_)
  // - . +
   newTime := currentTime.Add(24 * time.Hour)
-  diff := newTime.Sub(currentTime)
-  diff = fmt.Sprint(diff)
+  diff_ := newTime.Sub(currentTime)
+  diff = fmt.Sprint(diff_)
 // - . +
 data = data + fmt.Sprint(currentTime_Year)
    data = data + currentTime_Year + currentTime_Month + currentTime_Day + currentTime_Hour + currentTime_Minute + currentTime_Second + currentTime_Nanosecond + currentTime_Location + currentTime_Local + compTime_Before + compTime_After + compTime_Equal + newTime + diff
