@@ -589,7 +589,7 @@ body { padding-bottom: 175px; }
  // - . +
     navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
     
-    navData := `<button onclick='getPageData(pageID)'>Page Open</button>  <button onclick='getNavData(navList_Courses)'>Courses</button> <button onclick='getNavData(navList_Concepts)'>Concepts</button>`
+    navData := `<button onclick='getPageData(pageID)'>Page Open</button>  <button onclick='getNavData(navList_Courses)'>Courses</button> <button onclick='getNavData(navList_Concepts)'>Concepts</button><div id="navArea"> + </div>`
     
     navSpace := navData + navList
     
