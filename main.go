@@ -220,22 +220,27 @@ pagePath := r.URL.Path
   data = date.Format(time.RFC3339) + " !# - &nbsp;" + date.Format(time.Kitchen)
   
   currentTime := time.Now()
-fmt.Println(currentTime.Year())
-fmt.Println(currentTime.Month())
-fmt.Println(currentTime.Day())
-fmt.Println(currentTime.Hour())
-fmt.Println(currentTime.Minute())
-fmt.Println(currentTime.Second())
-fmt.Println(currentTime.Nanosecond())
-fmt.Println(currentTime.Location())
-fmt.Println(currentTime.Local())
-compTime := currentTime.Add(30 * time.Minute)
-fmt.Println(compTime.Before(currentTime))
-fmt.Println(compTime.After(currentTime))
-fmt.Println(compTime.Equal(currentTime))
-newTime := currentTime.Add(24 * time.Hour)
-diff := newTime.Sub(currentTime)
-fmt.Println(diff)
+  currentTime_Year := currentTime.Year()
+  currentTime_Month := currentTime.Month()
+  currentTime_Day := currentTime.Day()
+  currentTime_Hour := currentTime.Hour()
+  currentTime_Minute := currentTime.Minute()
+  currentTime_Second :=currentTime.Second()
+  currentTime_Nanosecond := currentTime.Nanosecond()
+  currentTime_Location := currentTime.Location()
+  currentTime_Local := currentTime.Local()
+// - . +  
+  compTime := currentTime.Add(30 * time.Minute)
+  compTime_Before := compTime.Before(currentTime)
+  compTime_After := compTime.After(currentTime)
+  compTime_Equal := compTime.Equal(currentTime)
+ // - . +
+  newTime := currentTime.Add(24 * time.Hour)
+  diff := newTime.Sub(currentTime)
+// - . +
+  data = data + currentTime_Year + currentTime_Month + currentTime_Day + currentTime_Hour + currentTime_Minute + currentTime_Second + currentTime_Nanosecond + currentTime_Location + currentTime_Local + compTime_Before + compTime_After + compTime_Equal + newTime + diff
+
+
 }
 
   if data == "Amount-Conversion" {
