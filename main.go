@@ -589,13 +589,24 @@ body { padding-bottom: 175px; }
  // - . +
     navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
     
-    navData := "<button onclick='getPageData(pageID)'>Page Open</button>"
+    navData := "<button onclick='getPageData(pageID)'>Page Open</button>  "<button onclick='getNavData(navList_Courses)'>Courses</button>  "<button onclick='getNavData(navList_Concepts)'>Concepts</button>"
     
     navSpace := navData + navList
     
     bottomSheet := fmt.Sprintf("<div class='bottomSheet'> -%s</div>", navSpace)
     
     fmt.Fprintf(w, bottomSheet)
+    
+    getNavData_Request := `function getNavData(x) {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("navArea").innerHTML = this.responseText;
+    }
+  xhttp.open("GET", "/getNav/" + x, true);
+  xhttp.send();
+}`
+
+    fmt.Fprintf(w, "<script>%s</script>", getNavData_Request)
     
     getPageData_Request := `function getPageData(x) {
   const xhttp = new XMLHttpRequest();
@@ -946,6 +957,32 @@ func worldLoader(w http.ResponseWriter, r *http.Request) {
 }
     
 
+// - . -
+func getNavData(w http.ResponseWriter, r *http.Request) {
+	   if r.URL.Path != "/" {
+   	pagePath = r.URL.Path
+   }
+ // - . +   
+    var pathLayers = strings.Split(pagePath, "/")
+   // pathLayer1 := pathLayers[1]
+    pathLayer2 := pathLayers[2]
+    
+    var navList
+    
+    if pathLayer2 == "navList_Concepts" {
+ // - . +
+    navList =  getNavList("navList_Concepts")
+}
+
+  if pathLayer2 == "navList_Courses" {
+ // - . +
+    navList = getNavList("navList_Courses") 
+}
+       fmt.Fprintf(w, "Hello!")
+    fmt.Fprintf(w, navList)
+	
+}
+
 //  .  html url routes 
 //  .  as well as terminal cli logs
 
@@ -959,6 +996,9 @@ func main() {
     http.HandleFunc("/page/kitchen", kitchenPage_world)
     
           http.HandleFunc("/", testHandler)
+          
+    http.HandleFunc("/getNav/navList_Concepts", getNavData) 
+    http.HandleFunc("/getNav/navList_Courses", getNavData)      
           
    // ,  ° . +
     http.HandleFunc("/getData/Focaccia-Hands", getPageData)
