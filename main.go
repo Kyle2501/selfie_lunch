@@ -220,23 +220,23 @@ pagePath := r.URL.Path
   data = date.Format(time.RFC3339) + " !# - &nbsp;" + date.Format(time.Kitchen)
   
   currentTime := time.Now()
-  currentTime_Year := currentTime.Year()
-  currentTime_Month := currentTime.Month()
-  currentTime_Day := currentTime.Day()
-  currentTime_Hour := currentTime.Hour()
-  currentTime_Minute := currentTime.Minute()
-  currentTime_Second :=currentTime.Second()
-  currentTime_Nanosecond := currentTime.Nanosecond()
-  currentTime_Location := currentTime.Location()
-  currentTime_Local := currentTime.Local()
+  currentTime_Year := currentTime.Year().Format(time.RFC3339)
+  currentTime_Month := currentTime.Month().Format(time.RFC3339)
+  currentTime_Day := currentTime.Day().Format(time.RFC3339)
+  currentTime_Hour := currentTime.Hour().Format(time.RFC3339)
+  currentTime_Minute := currentTime.Minute().Format(time.RFC3339)
+  currentTime_Second :=currentTime.Second().Format(time.RFC3339)
+  currentTime_Nanosecond := currentTime.Nanosecond().Format(time.RFC3339)
+  currentTime_Location := currentTime.Location().Format(time.RFC3339)
+  currentTime_Local := currentTime.Local().Format(time.RFC3339)
 // - . +  
   compTime := currentTime.Add(30 * time.Minute)
-  compTime_Before := compTime.Before(currentTime)
-  compTime_After := compTime.After(currentTime)
-  compTime_Equal := compTime.Equal(currentTime)
+  compTime_Before := compTime.Before(currentTime).Format(time.RFC3339)
+  compTime_After := compTime.After(currentTime).Format(time.RFC3339)
+  compTime_Equal := compTime.Equal(currentTime).Format(time.RFC3339)
  // - . +
-  newTime := currentTime.Add(24 * time.Hour)
-  diff := newTime.Sub(currentTime)
+  newTime := currentTime.Add(24 * time.Hour).Format(time.RFC3339)
+  diff := newTime.Sub(currentTime).Format(time.RFC3339)
 // - . +
   data = data + currentTime_Year + currentTime_Month + currentTime_Day + currentTime_Hour + currentTime_Minute + currentTime_Second + currentTime_Nanosecond + currentTime_Location + currentTime_Local + compTime_Before + compTime_After + compTime_Equal + newTime + diff
 
