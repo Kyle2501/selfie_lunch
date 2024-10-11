@@ -217,7 +217,7 @@ pagePath := r.URL.Path
 
   if data == "Timer" {
   date := time.Now() //.UTC().MarshalText()
-  data = date.Format(time.RFC3339) + " !# - &nbsp;" + date.Format(time.Kitchen)
+  // data = date.Format(time.RFC3339) + " !# - &nbsp;" + date.Format(time.Kitchen)
   
   currentTime := time.Now()
   currentTime_Year := currentTime.Year()
