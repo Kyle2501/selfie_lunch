@@ -959,7 +959,9 @@ func worldLoader(w http.ResponseWriter, r *http.Request) {
 
 // - . -
 func getNavData(w http.ResponseWriter, r *http.Request) {
-	   if r.URL.Path != "/" {
+	  pagePath := r.URL.Path
+
+ if r.URL.Path != "/" {
    	pagePath = r.URL.Path
    }
  // - . +   
