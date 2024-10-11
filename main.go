@@ -50,6 +50,18 @@ type SOSPageData struct {
     SOSNav     []navList
 }
 
+type Person struct {
+  FirstName string
+  LastName string
+  Age int
+}
+
+type Employee struct {
+  Person
+  Salary int
+}
+
+
 
 
 
@@ -206,6 +218,24 @@ pagePath := r.URL.Path
   if data == "Timer" {
   date := time.Now() //.UTC().MarshalText()
   data = date.Format(time.RFC3339) + " !# - &nbsp;" + date.Format(time.Kitchen)
+  
+  currentTime := time.Now()
+fmt.Println(currentTime.Year())
+fmt.Println(currentTime.Month())
+fmt.Println(currentTime.Day())
+fmt.Println(currentTime.Hour())
+fmt.Println(currentTime.Minute())
+fmt.Println(currentTime.Second())
+fmt.Println(currentTime.Nanosecond())
+fmt.Println(currentTime.Location())
+fmt.Println(currentTime.Local())
+compTime := currentTime.Add(30 * time.Minute)
+fmt.Println(compTime.Before(currentTime))
+fmt.Println(compTime.After(currentTime))
+fmt.Println(compTime.Equal(currentTime))
+newTime := currentTime.Add(24 * time.Hour)
+diff := newTime.Sub(currentTime)
+fmt.Println(diff)
 }
 
   if data == "Amount-Conversion" {
@@ -225,7 +255,23 @@ pagePath := r.URL.Path
 }
 
   if data == "Session-Log" {
-    data = "Session Log Page"
+  	
+  emp1 := &Employee{
+    Person: Person{
+        FirstName: "Russ",
+        LastName: "Blinken",
+        Age: 30,
+    },
+    Salary: 100000,
+}
+
+  fmt.Println(emp1.FirstName) // Russ
+fmt.Println(emp1.Salary) // 100000
+
+  
+    data = `Session Log Page
+    
+    `
 }
 
 if data == "CSS-Layout" {
@@ -449,23 +495,35 @@ body { padding-bottom: 175px; }
 </style>
 </head>
     `, pagePath)
-    
+ // - . +
     topBar := `<body>
     <div class="top_bar">
       <p><b>#! - Selfie Lunch Concepts</b></p>
       <hr />
     </div><!-- - . top_bar - -->`
-    
     fmt.Fprintf(w, topBar)
+ // - . +
     var sectionBreak = "<br /><hr /><br />"
-    
+  
+
+  // - . +
+    fmt.Fprintf(w, "<div class='pagePath_wrap'>")    
     fmt.Fprintf(w, "World! %s", pagePath)
-    
     pageInfo := getPageInfo(pagePath)
     fmt.Fprintf(w, pageInfo)
-    
+    fmt.Fprintf(w, "</div><!-- - . pagePath_wrap - -->")
+ // - . +
     fmt.Fprintf(w, sectionBreak)
     
+
+  // - . +
+     var heroArea_wrap = `<div class="heroArea_wrap">
+             <p><b>Hero Area Wrap</b></p>
+             <div class="heroArea_image"> - </div>
+     </div><!-- - . heroArea_wrap - -->`
+    fmt.Fprintf(w, heroArea_wrap)
+ // - . +
+   
     getData_Button := `<div id="demo">
   <h2>Let AJAX change this text</h2>
   <button type="button" onclick="loadDoc()">Change Content</button>
@@ -474,7 +532,7 @@ body { padding-bottom: 175px; }
 
     fmt.Fprintf(w, getData_Button)
     fmt.Fprintf(w, sectionBreak)
-    
+ // - . +   
     var pathLayers = strings.Split(pagePath, "/")
     fmt.Fprintf(w, pathLayers[1])
     fmt.Fprintf(w, sectionBreak)
@@ -489,7 +547,7 @@ body { padding-bottom: 175px; }
     pageID :=  fmt.Sprintf("var pageID = '%s'", pathLayers[2])
     fmt.Fprintf(w, "<script>%s</script>", pageID)
     
-    
+ // - . +
     navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
     
     navData := "<button onclick='getPageData(pageID)'>Page Open</button>"
