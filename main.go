@@ -589,7 +589,7 @@ body { padding-bottom: 175px; }
  // - . +
     navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
     
-    navData := "<button onclick='getPageData(pageID)'>Page Open</button>  "<button onclick='getNavData(navList_Courses)'>Courses</button>  "<button onclick='getNavData(navList_Concepts)'>Concepts</button>"
+    navData := `<button onclick='getPageData(pageID)'>Page Open</button>  <button onclick='getNavData(navList_Courses)'>Courses</button> <button onclick='getNavData(navList_Concepts)'>Concepts</button>`
     
     navSpace := navData + navList
     
@@ -967,7 +967,7 @@ func getNavData(w http.ResponseWriter, r *http.Request) {
    // pathLayer1 := pathLayers[1]
     pathLayer2 := pathLayers[2]
     
-    var navList
+    navList := "test"
     
     if pathLayer2 == "navList_Concepts" {
  // - . +
