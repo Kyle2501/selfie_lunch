@@ -251,7 +251,7 @@ pagePath := r.URL.Path
   compTime_Before := fmt.Sprint(compTime_Before_)
   
   compTime_After_ := compTime.After(currentTime)
-  compTime_After = fmt.Sprint(compTime_After_)
+  compTime_After := fmt.Sprint(compTime_After_)
   
   compTime_Equal_ := compTime.Equal(currentTime)
   compTime_Equal := fmt.Sprint(compTime_Equal_)
