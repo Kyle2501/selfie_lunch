@@ -260,7 +260,7 @@ pagePath := r.URL.Path
   diff := newTime.Sub(currentTime)
   diff = diff
 // - . +
-data = data + currentTime_Year
+data = data + fmt.Sprint(currentTime_Year)
   // data = data + currentTime_Year + currentTime_Month + currentTime_Day + currentTime_Hour + currentTime_Minute + currentTime_Second + currentTime_Nanosecond + currentTime_Location + currentTime_Local + compTime_Before + compTime_After + compTime_Equal + newTime + diff
 
 
