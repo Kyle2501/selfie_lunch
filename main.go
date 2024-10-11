@@ -223,42 +223,42 @@ pagePath := r.URL.Path
   currentTime_Year := currentTime.Year()
   
   currentTime_Month_ := currentTime.Month()
-   currentTime_Month = currentTime_Month_.String()
+   currentTime_Month := currentTime_Month_.String()
    
   currentTime_Day_ := currentTime.Day()
-  currentTime_Day = fmt.Sprint(currentTime_Day_)
+  currentTime_Day := fmt.Sprint(currentTime_Day_)
   
   currentTime_Hour_ := currentTime.Hour()
-  currentTime_Hour = fmt.Sprint(currentTime_Hour_)
+  currentTime_Hour := fmt.Sprint(currentTime_Hour_)
   
   currentTime_Minute_ := currentTime.Minute()
-  currentTime_Minute = fmt.Sprint(currentTime_Minute_)
+  currentTime_Minute := fmt.Sprint(currentTime_Minute_)
   
   currentTime_Second_ :=currentTime.Second()
-  currentTime_Second = fmt.Sprint(currentTime_Second_)
+  currentTime_Second := fmt.Sprint(currentTime_Second_)
   
   currentTime_Nanosecond_ := currentTime.Nanosecond()
-  currentTime_Nanosecond = fmt.Sprint(currentTime_Nanosecond_)
+  currentTime_Nanosecond := fmt.Sprint(currentTime_Nanosecond_)
   
   currentTime_Location_ := currentTime.Location()
-  currentTime_Location = fmt.Sprint(currentTime_Location_)
+  currentTime_Location := fmt.Sprint(currentTime_Location_)
   
   currentTime_Local_ := currentTime.Local()
-  currentTime_Local = fmt.Sprint(currentTime_Local_)
+  currentTime_Local := fmt.Sprint(currentTime_Local_)
 // - . +  
   compTime := currentTime.Add(30 * time.Minute)
   compTime_Before_ := compTime.Before(currentTime)
-  compTime_Before = fmt.Sprint(compTime_Before_)
+  compTime_Before := fmt.Sprint(compTime_Before_)
   
   compTime_After_ := compTime.After(currentTime)
   compTime_After = fmt.Sprint(compTime_After_)
   
   compTime_Equal_ := compTime.Equal(currentTime)
-  compTime_Equal = fmt.Sprint(compTime_Equal_)
+  compTime_Equal := fmt.Sprint(compTime_Equal_)
  // - . +
   newTime := currentTime.Add(24 * time.Hour)
   diff_ := newTime.Sub(currentTime)
-  diff = fmt.Sprint(diff_)
+  diff := fmt.Sprint(diff_)
 // - . +
 data = data + fmt.Sprint(currentTime_Year)
    data = data + currentTime_Year + currentTime_Month + currentTime_Day + currentTime_Hour + currentTime_Minute + currentTime_Second + currentTime_Nanosecond + currentTime_Location + currentTime_Local + compTime_Before + compTime_After + compTime_Equal + newTime + diff
