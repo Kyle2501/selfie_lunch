@@ -223,7 +223,7 @@ pagePath := r.URL.Path
   currentTime_Year := currentTime.Year()
   
   currentTime_Month := currentTime.Month()
-   currentTime_Month = fmt.Sprint(currentTime_Month)
+   currentTime_Month = currentTime_Month.String()
    
   currentTime_Day := currentTime.Day()
   currentTime_Day = fmt.Sprint(currentTime_Day)
