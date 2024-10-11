@@ -220,25 +220,26 @@ pagePath := r.URL.Path
   data = date.Format(time.RFC3339) + " !# - &nbsp;" + date.Format(time.Kitchen)
   
   currentTime := time.Now()
-  currentTime_Year := currentTime.Year().String()
-  currentTime_Month := currentTime.Month().String()
-  currentTime_Day := currentTime.Day().String()
-  currentTime_Hour := currentTime.Hour().String()
-  currentTime_Minute := currentTime.Minute().String()
-  currentTime_Second :=currentTime.Second().String()
-  currentTime_Nanosecond := currentTime.Nanosecond().String()
-  currentTime_Location := currentTime.Location().String()
-  currentTime_Local := currentTime.Local().String()
+  currentTime_Year := currentTime.Year()
+  currentTime_Month := currentTime.Month()
+  currentTime_Day := currentTime.Day()
+  currentTime_Hour := currentTime.Hour()
+  currentTime_Minute := currentTime.Minute()
+  currentTime_Second :=currentTime.Second()
+  currentTime_Nanosecond := currentTime.Nanosecond()
+  currentTime_Location := currentTime.Location()
+  currentTime_Local := currentTime.Local()
 // - . +  
   compTime := currentTime.Add(30 * time.Minute)
-  compTime_Before := compTime.Before(currentTime).String()
-  compTime_After := compTime.After(currentTime).String()
-  compTime_Equal := compTime.Equal(currentTime).String()
+  compTime_Before := compTime.Before(currentTime)
+  compTime_After := compTime.After(currentTime)
+  compTime_Equal := compTime.Equal(currentTime)
  // - . +
-  newTime := currentTime.Add(24 * time.Hour).String()
-  diff := newTime.Sub(currentTime).String()
+  newTime := currentTime.Add(24 * time.Hour)
+  diff := newTime.Sub(currentTime)
 // - . +
-  data = data + currentTime_Year + currentTime_Month + currentTime_Day + currentTime_Hour + currentTime_Minute + currentTime_Second + currentTime_Nanosecond + currentTime_Location + currentTime_Local + compTime_Before + compTime_After + compTime_Equal + newTime + diff
+data = data + currentTime_Year
+  // data = data + currentTime_Year + currentTime_Month + currentTime_Day + currentTime_Hour + currentTime_Minute + currentTime_Second + currentTime_Nanosecond + currentTime_Location + currentTime_Local + compTime_Before + compTime_After + compTime_Equal + newTime + diff
 
 
 }
