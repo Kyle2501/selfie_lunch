@@ -216,7 +216,7 @@ pagePath := r.URL.Path
 }
 
   if data == "Timer" {
-  date := time.Now() //.UTC().MarshalText()
+  // date := time.Now() //.UTC().MarshalText()
   // data = date.Format(time.RFC3339) + " !# - &nbsp;" + date.Format(time.Kitchen)
   
   currentTime := time.Now()
@@ -260,8 +260,8 @@ pagePath := r.URL.Path
   diff_ := newTime.Sub(currentTime)
   diff := fmt.Sprint(diff_)
 // - . +
-data = data + fmt.Sprint(currentTime_Year)
-   data = data + currentTime_Month + currentTime_Day + currentTime_Hour + currentTime_Minute + currentTime_Second + currentTime_Nanosecond + currentTime_Location + currentTime_Local + compTime_Before + compTime_After + compTime_Equal + newTime + diff
+data = fmt.Sprint(currentTime_Year)
+   data = data + currentTime_Month // + currentTime_Day + currentTime_Hour + currentTime_Minute + currentTime_Second + currentTime_Nanosecond + currentTime_Location + currentTime_Local + compTime_Before + compTime_After + compTime_Equal + newTime + diff
 
 
 }
