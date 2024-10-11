@@ -222,6 +222,7 @@ pagePath := r.URL.Path
   currentTime := time.Now()
   currentTime_Year := currentTime.Year()
   currentTime_Month := currentTime.Month()
+   currentTime_Month = currentTime_Month
   currentTime_Day := currentTime.Day()
   currentTime_Hour := currentTime.Hour()
   currentTime_Minute := currentTime.Minute()
