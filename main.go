@@ -227,6 +227,7 @@ pagePath := r.URL.Path
    
   currentTime_Day_ := currentTime.Day()
   currentTime_Day := fmt.Sprint(currentTime_Day_)
+  currentTime_Day = currentTime_Day + " - "
   
   currentTime_Hour_ := currentTime.Hour()
   currentTime_Hour := fmt.Sprint(currentTime_Hour_)
@@ -271,7 +272,7 @@ pagePath := r.URL.Path
   diff = diff + " - "
 // - . +
 data = fmt.Sprint(currentTime_Year)
-   data = data + currentTime_Month // + currentTime_Day + currentTime_Hour + currentTime_Minute + currentTime_Second + currentTime_Nanosecond + currentTime_Location + currentTime_Local + compTime_Before + compTime_After + compTime_Equal + newTime + diff
+   data = data + currentTime_Month + currentTime_Day // + currentTime_Hour + currentTime_Minute + currentTime_Second + currentTime_Nanosecond + currentTime_Location + currentTime_Local + compTime_Before + compTime_After + compTime_Equal + newTime + diff
 
 
 }
