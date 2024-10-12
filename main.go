@@ -577,19 +577,21 @@ main { background-color: #fff; margin-top: 85px; }
   
 
   // - . +
-    fmt.Fprintf(w, "<div class='pagePath_wrap'><div id='pagePath'><code>")    
-    fmt.Fprintf(w, "<b>~ World!</b> %s", pagePath)
+  pagePath_code := fmt.Sprintf("<div class='pagePath_wrap'><div id='pagePath'><code>") + fmt.Sprintf(w, "<b>~ World!</b> %s", pagePath)
     pageInfo := getPageInfo(pagePath)
-    fmt.Fprintf(w, "<br /><b>Page: &nbsp;</b>%s", pageInfo)
-    fmt.Fprintf(w, "</code><div class='pathButtons'><button onclick='closePath()'>Close</button></div></div><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
+    pagePath_code = pagePath_code + fmt.Sprintf("<br /><b>Page: &nbsp;</b>%s", pageInfo) + fmt.Sprintf(w, "</code><div class='pathButtons'><button onclick='closePath()'>Close</button></div></div><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
  // - . +
     fmt.Fprintf(w, sectionBreak)
     
     closePath := `function closePath() {
     document.getElementById("pagePath").innerHTML = " - "
 }`
+  openPath := fmt.Sprintf("function showPath() {
+    document.getElementById("pagePath").innerHTML = `%s`
+}", pagePath_code)
 
     fmt.Fprintf(w, "<script>%s</script>", closePath)
+    fmt.Fprintf(w, "<script>%s</script>", openPath)
     
     
    fmt.Fprintf(w, "<main>")
