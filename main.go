@@ -508,7 +508,7 @@ func getPageInfo(x string) string {
     data = "hello" + data
 	
 	if x == "/concepts/Focaccia-Hands" {
-      data = "Focaccia-Hands Concept Page"
+      data = "<br /><b>Page: &nbsp;</b> Focaccia-Hands Concept Page"
     } 
   return data
 }
@@ -549,7 +549,7 @@ body { padding-bottom: 175px; }
 
   // - . +
     fmt.Fprintf(w, "<div class='pagePath_wrap'><code>")    
-    fmt.Fprintf(w, "World! %s", pagePath)
+    fmt.Fprintf(w, "<b>~ World!</b> %s", pagePath)
     pageInfo := getPageInfo(pagePath)
     fmt.Fprintf(w, pageInfo)
     fmt.Fprintf(w, "</code></div><!-- - . pagePath_wrap - -->")
