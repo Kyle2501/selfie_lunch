@@ -608,9 +608,7 @@ main { background-color: #fff; margin-top: 85px; }
   fmt.Fprintf(w, "</main>") 
  
     var pathLayers = strings.Split(pagePath, "/")
-    fmt.Fprintf(w, "<code><b>%s</b></code>" ,pathLayers[1])
-    fmt.Fprintf(w, sectionBreak)
-    fmt.Fprintf(w, "<code>%s</code>", pathLayers[2])
+    pathLayer_code := fmt.Sprintf("<code><b>%s</b></code>" ,pathLayers[1]) + sectionBreak) + fmt.Sprintf("<code>%s</code>", pathLayers[2])
    
     fmt.Fprintf(w, sectionBreak)
     
@@ -630,7 +628,7 @@ main { background-color: #fff; margin-top: 85px; }
 <button onclick="closeNavList();">Close</button>
 <div id="navArea"> + </div>`
     
-    navSpace := navData // + navList
+    navSpace := pathLayer_code + navData // + navList
     
     bottomSheet := fmt.Sprintf("<div class='bottomSheet'> -%s</div>", navSpace)
     
