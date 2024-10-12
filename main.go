@@ -554,6 +554,8 @@ body { padding-bottom: 175px; background-color: lightblue; }
 .top_bar_wrap { position: fixed; top: 0; left: 0; right: 0; background-color: #fff;  }
 .top_bar_data { margin: 10px; }
 
+main { background-color: #fff; }
+
 .pagePath_wrap { font-size: 12px; }
 .heroArea_wrap { margin-top: 85px; min-height: 175px; border-top: 2px solid #aaa; }
 
@@ -582,7 +584,7 @@ body { padding-bottom: 175px; background-color: lightblue; }
  // - . +
     fmt.Fprintf(w, sectionBreak)
     
-
+   fmt.Fprintf(w, "<main>")
   // - . +
      var heroArea_wrap = `<div class="heroArea_wrap">
              <p><b>Hero Area Wrap</b></p>
@@ -601,6 +603,9 @@ body { padding-bottom: 175px; background-color: lightblue; }
     fmt.Fprintf(w, getData_Button)
     fmt.Fprintf(w, sectionBreak)
  // - . +   
+ 
+  fmt.Fprintf(w, "</main>") 
+ 
     var pathLayers = strings.Split(pagePath, "/")
     fmt.Fprintf(w, "<code><b>%s</b></code>" ,pathLayers[1])
     fmt.Fprintf(w, sectionBreak)
