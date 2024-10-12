@@ -591,7 +591,11 @@ body { padding-bottom: 175px; }
  // - . +
   //  navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
     
-    navData := `<button onclick='getPageData(pageID)'>Page Open</button>  <button onclick='getNavData("navList_Courses")'>Courses</button> <button onclick='getNavData("navList_Concepts")'>Concepts</button><div id="navArea"> + </div>`
+    navData := `<button onclick='getPageData(pageID)'>Page Open</button>  
+<button onclick='getNavData("navList_Courses")'>Courses</button> 
+<button onclick='getNavData("navList_Concepts")'>Concepts</button>
+<button onclick="closeNavList();">Close</button>
+<div id="navArea"> + </div>`
     
     navSpace := navData // + navList
     
@@ -606,7 +610,11 @@ body { padding-bottom: 175px; }
     }
   xhttp.open("GET", "/getNav/" + x, true);
   xhttp.send();
-}`
+}
+function closeNavList() {
+	document.getElementById("navArea").innerHTML = " - ";
+	}
+`
 
     fmt.Fprintf(w, "<script>%s</script>", getNavData_Request)
     
