@@ -555,10 +555,10 @@ body { padding-bottom: 175px; background-color: lightblue; }
 .top_bar_data { margin: 10px; }
 .pathButtons { position: absolute; right: 10px; top: 5px; }
 
-main { background-color: #fff; }
+main { background-color: #fff; margin-top: 85px; }
 
 .pagePath_wrap { font-size: 12px; position: relative; }
-.heroArea_wrap { margin-top: 85px; min-height: 175px; border-top: 2px solid #aaa; }
+.heroArea_wrap {  min-height: 175px; border-top: 2px solid #aaa; }
 
 .bottomSheet { outline: 1px solid #aaa; width: 95%; margin: 0 auto; position: fixed; bottom: 10px; left: 5px; right: 5px;  background-color: #fff; }
     
@@ -581,7 +581,7 @@ main { background-color: #fff; }
     fmt.Fprintf(w, "<b>~ World!</b> %s", pagePath)
     pageInfo := getPageInfo(pagePath)
     fmt.Fprintf(w, "<br /><b>Page: &nbsp;</b>%s", pageInfo)
-    fmt.Fprintf(w, "</code><div class='pathButtons'><button onclick='closePath'>Close</button><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
+    fmt.Fprintf(w, "</code><div class='pathButtons'><button onclick='closePath'>Close</button></div><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
  // - . +
     fmt.Fprintf(w, sectionBreak)
     
