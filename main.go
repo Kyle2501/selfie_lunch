@@ -586,9 +586,7 @@ main { background-color: #fff; margin-top: 85px; }
     closePath := `function closePath() {
     document.getElementById("pagePath").innerHTML = " - <div class='pathButtons'><button onclick='openPath()'>Page Path</button></div>"
 }`
-  openPath := fmt.Sprintf("function showPath() {
-    document.getElementById("pagePath").innerHTML = `%s`
-}", pagePath_code)
+  openPath := fmt.Sprintf("function showPath() { document.getElementById("pagePath").innerHTML = `%s`}", pagePath_code)
 
     fmt.Fprintf(w, "<script>%s</script>", closePath)
     fmt.Fprintf(w, "<script>%s</script>", openPath)
