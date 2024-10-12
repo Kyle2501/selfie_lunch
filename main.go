@@ -581,7 +581,9 @@ main { background-color: #fff; margin-top: 85px; }
     pageInfo := getPageInfo(pagePath)
     pagePath_code = pagePath_code + fmt.Sprintf("<br /><b>Page: &nbsp;</b>%s", pageInfo) + fmt.Sprintf("</code><div class='pathButtons'><button onclick='closePath()'>Close</button></div></div><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
  // - . +
+ 
     fmt.Fprintf(w, sectionBreak)
+    fmt.Fprintf(w, pagePath_code)
     
     closePath := `function closePath() {
     document.getElementById("pagePath").innerHTML = " - <div class='pathButtons'><button onclick='openPath()'>Page Path</button></div>"
