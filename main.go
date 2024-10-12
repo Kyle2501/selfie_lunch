@@ -553,11 +553,11 @@ func world(w http.ResponseWriter, r *http.Request) {
 body { padding-bottom: 175px; background-color: lightblue; }
 .top_bar_wrap { position: fixed; top: 0; left: 0; right: 0; background-color: #fff;  }
 .top_bar_data { margin: 10px; }
-.pathButtons { position: absolute; right: 10px; }
+.pathButtons { position: absolute; right: 10px; top: 5px; }
 
 main { background-color: #fff; }
 
-.pagePath_wrap { font-size: 12px; }
+.pagePath_wrap { font-size: 12px; position: relative; }
 .heroArea_wrap { margin-top: 85px; min-height: 175px; border-top: 2px solid #aaa; }
 
 .bottomSheet { outline: 1px solid #aaa; width: 95%; margin: 0 auto; position: fixed; bottom: 10px; left: 5px; right: 5px;  background-color: #fff; }
