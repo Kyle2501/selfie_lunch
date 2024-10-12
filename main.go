@@ -550,9 +550,9 @@ func world(w http.ResponseWriter, r *http.Request) {
 
 <style>
     
-body { padding-bottom: 175px; }
+body { padding-bottom: 175px; background-color: lightblue; }
 .top_bar_wrap { position: fixed; top: 0; left: 0; right: 0; background-color: #fff;  }
-.top_bar_wrap { margin: 10px; }
+.top_bar_data { margin: 10px; }
 
 .pagePath_wrap { font-size: 12px; }
 .heroArea_wrap { margin-top: 85px; min-height: 175px; border-top: 2px solid #aaa; }
