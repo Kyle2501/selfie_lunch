@@ -586,7 +586,7 @@ main { background-color: #fff; margin-top: 85px; }
     fmt.Fprintf(w, sectionBreak)
     
     closePath := `function closePath() {
-    document.getElementById("closePath").innerHTML = " - "
+    document.getElementById("pagePath").innerHTML = " - "
 }`
 
     fmt.Fprintf(w, "<script>%s</script>", closePath)
