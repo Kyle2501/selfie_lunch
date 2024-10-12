@@ -553,6 +553,7 @@ func world(w http.ResponseWriter, r *http.Request) {
 body { padding-bottom: 175px; background-color: lightblue; }
 .top_bar_wrap { position: fixed; top: 0; left: 0; right: 0; background-color: #fff;  }
 .top_bar_data { margin: 10px; }
+.pathButtons { position: absolute; right: 10px; }
 
 main { background-color: #fff; }
 
@@ -580,7 +581,7 @@ main { background-color: #fff; }
     fmt.Fprintf(w, "<b>~ World!</b> %s", pagePath)
     pageInfo := getPageInfo(pagePath)
     fmt.Fprintf(w, "<br /><b>Page: &nbsp;</b>%s", pageInfo)
-    fmt.Fprintf(w, "</code><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
+    fmt.Fprintf(w, "</code><div class="pathButtons"><button onclick="closePath">Close</button><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
  // - . +
     fmt.Fprintf(w, sectionBreak)
     
