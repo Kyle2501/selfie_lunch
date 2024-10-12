@@ -602,9 +602,9 @@ body { padding-bottom: 175px; }
     fmt.Fprintf(w, sectionBreak)
  // - . +   
     var pathLayers = strings.Split(pagePath, "/")
-    fmt.Fprintf(w, pathLayers[1])
+    fmt.Fprintf(w, "<code><b>%s</b></code>" ,pathLayers[1])
     fmt.Fprintf(w, sectionBreak)
-    fmt.Fprintf(w, pathLayers[2])
+    fmt.Fprintf(w, "<code>%s</code>", pathLayers[2])
    
     fmt.Fprintf(w, sectionBreak)
     
