@@ -508,8 +508,31 @@ func getPageInfo(x string) string {
     data = "hello" + data
 	
 	if x == "/concepts/Focaccia-Hands" {
-      data = "<br /><b>Page: &nbsp;</b> Focaccia-Hands Concept Page"
+      data = "Focaccia-Hands Concept Page"
     } 
+   if x == "/concepts/Loco-Moco-Bus" {
+      data = "Loco-Moco-Bus Concept Page"
+    } 
+   if x == "/concepts/Kitchen-Page" {
+      data = "Kitchen-Page Concept Page"
+    } 
+   if x == "/concepts/Honolulu-Lemonade" {
+      data = "Honolulu-Lemonade Concept Page"
+    } 
+ // - . +
+    if x == "/courses/CSS-Layout" {
+      data = "CSS-Layout Course Page"
+    } 
+    if x == "/courses/Culniary-Manager" {
+      data = "Culniary-Manager Course Page"
+    } 
+    if x == "/courses/Food-Handler" {
+      data = "Food-Handler Course Page"
+    } 
+    if x == "/courses/System-Administrator" {
+      data = "System-Administrator Course Page"
+    } 
+    
   return data
 }
 
@@ -551,7 +574,7 @@ body { padding-bottom: 175px; }
     fmt.Fprintf(w, "<div class='pagePath_wrap'><code>")    
     fmt.Fprintf(w, "<b>~ World!</b> %s", pagePath)
     pageInfo := getPageInfo(pagePath)
-    fmt.Fprintf(w, pageInfo)
+    fmt.Fprintf(w, "<br /><b>Page: &nbsp;</b>%s", pageInfo)
     fmt.Fprintf(w, "</code></div><!-- - . pagePath_wrap - -->")
  // - . +
     fmt.Fprintf(w, sectionBreak)
