@@ -528,6 +528,8 @@ func world(w http.ResponseWriter, r *http.Request) {
 <style>
     
 body { padding-bottom: 175px; }
+.pagePath_wrap { font-size: 12px; }
+
 
 .bottomSheet { outline: 1px solid #aaa; width: 95%; margin: 0 auto; }
     
@@ -546,11 +548,11 @@ body { padding-bottom: 175px; }
   
 
   // - . +
-    fmt.Fprintf(w, "<div class='pagePath_wrap'>")    
+    fmt.Fprintf(w, "<div class='pagePath_wrap'><code>")    
     fmt.Fprintf(w, "World! %s", pagePath)
     pageInfo := getPageInfo(pagePath)
     fmt.Fprintf(w, pageInfo)
-    fmt.Fprintf(w, "</div><!-- - . pagePath_wrap - -->")
+    fmt.Fprintf(w, "</code></div><!-- - . pagePath_wrap - -->")
  // - . +
     fmt.Fprintf(w, sectionBreak)
     
