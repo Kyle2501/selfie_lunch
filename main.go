@@ -581,7 +581,7 @@ main { background-color: #fff; }
     fmt.Fprintf(w, "<b>~ World!</b> %s", pagePath)
     pageInfo := getPageInfo(pagePath)
     fmt.Fprintf(w, "<br /><b>Page: &nbsp;</b>%s", pageInfo)
-    fmt.Fprintf(w, "</code><div class="pathButtons"><button onclick="closePath">Close</button><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
+    fmt.Fprintf(w, "</code><div class='pathButtons'><button onclick='closePath'>Close</button><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
  // - . +
     fmt.Fprintf(w, sectionBreak)
     
