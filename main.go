@@ -554,7 +554,7 @@ body { padding-bottom: 175px; }
 .pagePath_wrap { font-size: 12px; }
 
 
-.bottomSheet { outline: 1px solid #aaa; width: 95%; margin: 0 auto; }
+.bottomSheet { outline: 1px solid #aaa; width: 95%; margin: 0 auto; position: fixed; bottom: 10px; left: 5px; right: 5px; }
     
 </style>
 </head>
