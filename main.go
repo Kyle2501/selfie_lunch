@@ -577,13 +577,20 @@ main { background-color: #fff; margin-top: 85px; }
   
 
   // - . +
-    fmt.Fprintf(w, "<div class='pagePath_wrap'><code>")    
+    fmt.Fprintf(w, "<div class='pagePath_wrap'><div id='pagePath'><code>")    
     fmt.Fprintf(w, "<b>~ World!</b> %s", pagePath)
     pageInfo := getPageInfo(pagePath)
     fmt.Fprintf(w, "<br /><b>Page: &nbsp;</b>%s", pageInfo)
-    fmt.Fprintf(w, "</code><div class='pathButtons'><button onclick='closePath'>Close</button></div><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
+    fmt.Fprintf(w, "</code><div class='pathButtons'><button onclick='closePath()'>Close</button></div></div><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
  // - . +
     fmt.Fprintf(w, sectionBreak)
+    
+    closePath := `function closePath() {
+    document.getElementById("closePath").innerHTML = " - "
+}`
+
+    fmt.Fprintf(w, "<script>%s</script>", closePath)
+    
     
    fmt.Fprintf(w, "<main>")
   // - . +
@@ -604,6 +611,8 @@ main { background-color: #fff; margin-top: 85px; }
     fmt.Fprintf(w, getData_Button)
     fmt.Fprintf(w, sectionBreak)
  // - . +   
+ 
+ 
  
   fmt.Fprintf(w, "</main>") 
  
