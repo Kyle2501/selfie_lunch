@@ -554,7 +554,7 @@ body { padding-bottom: 175px; }
 .top_bar { position: fixed; top: 0; left: 0; right: 0; background-color: #fff; }
 
 .pagePath_wrap { font-size: 12px; }
-
+.heroArea_wrap { margin-top: 145px; min-height: 175px; border-top: 2px solid #aaa; }
 
 .bottomSheet { outline: 1px solid #aaa; width: 95%; margin: 0 auto; position: fixed; bottom: 10px; left: 5px; right: 5px;  background-color: #fff; }
     
