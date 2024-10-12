@@ -593,7 +593,7 @@ body { padding-bottom: 175px; }
     
     navData := `<button onclick='getPageData(pageID)'>Page Open</button>  <button onclick='getNavData("navList_Courses")'>Courses</button> <button onclick='getNavData("navList_Concepts")'>Concepts</button><div id="navArea"> + </div>`
     
-    navSpace := navData + navList
+    navSpace := navData // + navList
     
     bottomSheet := fmt.Sprintf("<div class='bottomSheet'> -%s</div>", navSpace)
     
