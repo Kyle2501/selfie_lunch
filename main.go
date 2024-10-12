@@ -551,7 +551,8 @@ func world(w http.ResponseWriter, r *http.Request) {
 <style>
     
 body { padding-bottom: 175px; }
-.top_bar { position: fixed; top: 0; left: 0; right: 0; background-color: #fff; padding 10px; }
+.top_bar_wrap { position: fixed; top: 0; left: 0; right: 0; background-color: #fff;  }
+.top_bar_wrap { margin: 10px; }
 
 .pagePath_wrap { font-size: 12px; }
 .heroArea_wrap { margin-top: 85px; min-height: 175px; border-top: 2px solid #aaa; }
@@ -563,7 +564,7 @@ body { padding-bottom: 175px; }
     `, pagePath)
  // - . +
     topBar := `<body>
-    <div class="top_bar">
+    <div class="top_bar_wrap"><div class="top_bar_data">
       <p><b>#! - Selfie Lunch Concepts</b></p>
       <hr />
 `
@@ -577,7 +578,7 @@ body { padding-bottom: 175px; }
     fmt.Fprintf(w, "<b>~ World!</b> %s", pagePath)
     pageInfo := getPageInfo(pagePath)
     fmt.Fprintf(w, "<br /><b>Page: &nbsp;</b>%s", pageInfo)
-    fmt.Fprintf(w, "</code><hr /></div><!-- - . pagePath_wrap - -->    </div><!-- - . top_bar - -->")
+    fmt.Fprintf(w, "</code><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
  // - . +
     fmt.Fprintf(w, sectionBreak)
     
@@ -588,6 +589,7 @@ body { padding-bottom: 175px; }
              <div class="heroArea_image"> - </div>
      </div><!-- - . heroArea_wrap - -->`
     fmt.Fprintf(w, heroArea_wrap)
+    fmt.Fprintf(w, sectionBreak)
  // - . +
    
     getData_Button := `<div id="demo">
