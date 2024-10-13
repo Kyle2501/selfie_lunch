@@ -606,11 +606,11 @@ main { background-color: #fff; margin-top: 85px; }
     fmt.Fprintf(w, sectionBreak)
  // - . +
    
-    getData_Button := `<div id="demo">
-  <h2>Let AJAX change this text</h2>
-  <button type="button" onclick="loadDoc()">Change Content</button>
+    getData_Button := fmt.Sprintf("<div id="demo">
+  <h2>%S</h2>
+  <button type="button" onclick="loadDoc()">Page Content</button>
 </div>
-<div id="info"><code>- info</code></div>`
+<div id="info"><code>- info</code></div>", pageInfo)
 
     fmt.Fprintf(w, getData_Button)
     fmt.Fprintf(w, sectionBreak)
