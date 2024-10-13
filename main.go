@@ -606,7 +606,7 @@ main { background-color: #fff; margin-top: 85px; }
     fmt.Fprintf(w, sectionBreak)
  // - . +
    
-    getData_Button := fmt.Sprintf("<div id='demo'><h2>%s</h2><button type='button' onclick='loadDoc()'>Page Content</button></div><div id='info'><code>- info</code></div>", pageInfo)
+    getData_Button := fmt.Sprintf("<div id='demo'><h2>%s</h2><button type='button' onclick='getPageData('%s')'>Page Content</button></div><div id='info'><code>- info</code></div>", pageInfo, pagePath)
 
     fmt.Fprintf(w, getData_Button)
     fmt.Fprintf(w, sectionBreak)
@@ -680,12 +680,12 @@ function closeNavList() {
 
     fmt.Fprintf(w, "<script>%s</script>", getPageInfo_Request)
     
-    getData_Request := `function loadDoc() {
+    getData_Request := `function loadDoc(x) {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
-    document.getElementById("demo").innerHTML = this.responseText;
+    document.getElementById("info").innerHTML = this.responseText;
     }
-  xhttp.open("GET", "/hello", true);
+  xhttp.open("GET", "/getPage/" + x", true);
   xhttp.send();
 }`
 
