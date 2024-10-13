@@ -541,6 +541,8 @@ func world(w http.ResponseWriter, r *http.Request) {
    if r.URL.Path != "/" {
    	pagePath = r.URL.Path
    }
+   
+       var pathLayers = strings.Split(pagePath, "/")
     
     fmt.Fprintf(w, `<!doctype html>
 <html>
@@ -606,7 +608,7 @@ main { background-color: #fff; margin-top: 85px; }
     fmt.Fprintf(w, sectionBreak)
  // - . +
    
-    getData_Button := fmt.Sprintf("<div id='demo'><h2>%s</h2><button type='button' onclick='getPageData('%s')'>Page Content</button></div><div id='info'><code>- info</code></div>", pageInfo, pagePath)
+    getData_Button := fmt.Sprintf("<div id='demo'><h2>%s</h2><button type='button' onclick='getPageData('%s')'>Page Content</button></div><div id='info'><code>- info</code></div>", pageInfo, pathLayers[2])
 
     fmt.Fprintf(w, getData_Button)
     fmt.Fprintf(w, sectionBreak)
@@ -616,7 +618,7 @@ main { background-color: #fff; margin-top: 85px; }
  
   fmt.Fprintf(w, "</main>") 
  
-    var pathLayers = strings.Split(pagePath, "/")
+
     pathLayer_code := fmt.Sprintf("<code><b>%s</b></code>" ,pathLayers[1]) + sectionBreak + fmt.Sprintf("<code>%s</code>", pathLayers[2]) + "<hr />"
    
     fmt.Fprintf(w, sectionBreak)
