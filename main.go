@@ -611,7 +611,7 @@ main { background-color: #fff; margin-top: 85px; }
     fmt.Fprintf(w, sectionBreak)
  // - . +
    
-    getData_Button := fmt.Sprintf("<div id='demoWrap'><h2>%s</h2></div><div id="demo"><button type='button' onclick='getPageData(pageID)'>Page Content</button></div><div id='info'><code>- info</code></div>", pageInfo)
+    getData_Button := fmt.Sprintf("<div id='demoWrap'><h2>%s</h2></div><div id='demo'><button type='button' onclick='getPageData(pageID)'>Page Content</button></div><div id='info'><code>- info</code></div>", pageInfo)
 
     fmt.Fprintf(w, getData_Button)
     fmt.Fprintf(w, sectionBreak)
