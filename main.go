@@ -606,11 +606,11 @@ main { background-color: #fff; margin-top: 85px; }
     fmt.Fprintf(w, sectionBreak)
  // - . +
    
-    getData_Button := fmt.Sprintf("<div id="demo">
+    getData_Button := fmt.Sprintf("<div id='demo'>
   <h2>%S</h2>
-  <button type="button" onclick="loadDoc()">Page Content</button>
+  <button type='button' onclick='loadDoc()'>Page Content</button>
 </div>
-<div id="info"><code>- info</code></div>", pageInfo)
+<div id='info'><code>- info</code></div>", pageInfo)
 
     fmt.Fprintf(w, getData_Button)
     fmt.Fprintf(w, sectionBreak)
