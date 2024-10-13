@@ -582,7 +582,8 @@ main { background-color: #fff; margin-top: 85px; }
   pagePath_code := fmt.Sprintf("<div class='pagePath_wrap'><div id='pagePath'>")
   showPagePath := "<code>" + fmt.Sprintf("<b>~ World!</b> %s", pagePath)
     pageInfo := getPageInfo(pagePath)
-    pagePath_code = pagePath_code + showPagePath + fmt.Sprintf("<br /><b>Page: &nbsp;</b>%s", pageInfo) + fmt.Sprintf("</code><div class='pathButtons'><button onclick='closePath()'>Close</button></div></div><hr /></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
+    
+    pagePath_code = pagePath_code + showPagePath + fmt.Sprintf("<br /><b>Page: &nbsp;</b>%s", pageInfo) + fmt.Sprintf("</code><div class='pathButtons'><button onclick='showInfo()'>Info</button> &nbsp; <button onclick='closePath()'>Close</button></div></div></div><!-- - . pagePath_wrap - -->    </div></div><!-- - . top_bar - -->")
  // - . +
      fmt.Fprintf(w, pagePath_code)
     fmt.Fprintf(w, sectionBreak)
@@ -602,13 +603,15 @@ main { background-color: #fff; margin-top: 85px; }
   // - . +
      var heroArea_wrap = `<div class="heroArea_wrap">
              <p><b>Hero Area Wrap</b></p>
-             <div class="heroArea_image"> - </div>
+             <div class="heroArea_image"> -
+               <div id="heroImg_data"></div>
+             </div>
      </div><!-- - . heroArea_wrap - -->`
     fmt.Fprintf(w, heroArea_wrap)
     fmt.Fprintf(w, sectionBreak)
  // - . +
    
-    getData_Button := fmt.Sprintf("<div id='demo'><h2>%s</h2><button type='button' onclick='getPageData(pageID)'>Page Content</button></div><div id='info'><code>- info</code></div>", pageInfo)
+    getData_Button := fmt.Sprintf("<div id='demoWrap'><h2>%s</h2></div><div id="demo"><button type='button' onclick='getPageData(pageID)'>Page Content</button></div><div id='info'><code>- info</code></div>", pageInfo)
 
     fmt.Fprintf(w, getData_Button)
     fmt.Fprintf(w, sectionBreak)
@@ -618,13 +621,13 @@ main { background-color: #fff; margin-top: 85px; }
  
   fmt.Fprintf(w, "</main>") 
  
-
+ // - . +   
     pathLayer_code := fmt.Sprintf("<code><b>%s</b></code>" ,pathLayers[1]) + sectionBreak + fmt.Sprintf("<code>%s</code>", pathLayers[2]) + "<hr />"
    
     fmt.Fprintf(w, sectionBreak)
     
     getPage := `function getPage(x) {
-     window.location.href = x }`
+      window.location.href = x }`
     fmt.Fprintf(w, "<script>%s</script>", getPage)
     
     pageID :=  fmt.Sprintf("var pageID = '%s'", pathLayers[2])
@@ -633,11 +636,17 @@ main { background-color: #fff; margin-top: 85px; }
  // - . +
   //  navList := getNavList("navList_Courses") + getNavList("navList_Concepts")
     
-    navData := `<button onclick='getPageData(pageID)'>Page Open</button>  
-<button onclick='getNavData("navList_Courses")'>Courses</button> 
-<button onclick='getNavData("navList_Concepts")'>Concepts</button>
-<button onclick="closeNavList();">Close</button>
-<div id="navArea"> + </div>`
+    navData := `<div class="navButtons_wrap">
+        <button onclick='getPageData(pageID)'>
+               Page Open</button>  
+         <button onclick='getNavData("navList_Courses")'>
+                Courses</button> 
+          <button onclick='getNavData("navList_Concepts")'>
+                Concepts</button>
+           <button onclick="closeNavList();">
+                 Close</button>
+           </div><!-- - . navButtons_wrap - -->
+           <div id="navArea"> + </div>`
     
     navSpace := pathLayer_code + navData // + navList
     
@@ -646,12 +655,12 @@ main { background-color: #fff; margin-top: 85px; }
     fmt.Fprintf(w, bottomSheet)
     
     getNavData_Request := `function getNavData(x) {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("navArea").innerHTML = this.responseText;
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+      document.getElementById("navArea").innerHTML = this.responseText;
     }
-  xhttp.open("GET", "/getNav/" + x, true);
-  xhttp.send();
+      xhttp.open("GET", "/getNav/" + x, true);
+      xhttp.send();
 }
 function closeNavList() {
 	document.getElementById("navArea").innerHTML = " - ";
@@ -661,34 +670,34 @@ function closeNavList() {
     fmt.Fprintf(w, "<script>%s</script>", getNavData_Request)
     
     getPageData_Request := `function getPageData(x) {
-  const xhttp = new XMLHttpRequest();
+      const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
-    document.getElementById("demo").innerHTML = this.responseText;
+      document.getElementById("demo").innerHTML = this.responseText;
     }
-  xhttp.open("GET", "/getData/" + x, true);
-  xhttp.send();
+      xhttp.open("GET", "/getData/" + x, true);
+      xhttp.send();
 }`
 
     fmt.Fprintf(w, "<script>%s</script>", getPageData_Request)
     
     getPageInfo_Request := `function getPageInfo(x) {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("info").innerHTML = this.responseText;
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+      document.getElementById("info").innerHTML = this.responseText;
     }
-  xhttp.open("GET", "/getData/" + x, true);
-  xhttp.send();
+      xhttp.open("GET", "/getData/" + x, true);
+      xhttp.send();
 }`
 
     fmt.Fprintf(w, "<script>%s</script>", getPageInfo_Request)
     
     getData_Request := `function loadDoc(x) {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("info").innerHTML = this.responseText;
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+      document.getElementById("info").innerHTML = this.responseText;
     }
-  xhttp.open("GET", "/getPage/" + x", true);
-  xhttp.send();
+      xhttp.open("GET", "/getPage/" + x", true);
+      xhttp.send();
 }`
 
     fmt.Fprintf(w, "<script>%s</script>", getData_Request)
